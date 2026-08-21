@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="uz" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Portfolio &amp; Real Keyslar — TOPDEV Yuqori Yuklamali IT Muhandislik</title>
+<meta name="description" content="TOPDEV muhandislik portfolioga nazar tashlang: yuqori o‘tkazuvchanlikka ega moliyaviy shlyuzlar, taqsimlangan ERP tizimlari, bulutli banking, telemeditsina tarmoqlari va yuqori chastotali savdo terminallari.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+<a href="#top" class="skip-link">Asosiy kontentga o‘tish</a>
+<div class="navbar-wrapper" id="navbarWrapper">
+<nav class="navbar wrap" id="navbar" aria-label="Asosiy navigatsiya">
+<a href="index.html" class="logo-mark">
+TOPDEV
+</a>
+<div class="nav-links">
+<a href="index.html" class="nav-link">Bosh sahifa</a>
+<a href="portfolio.html" class="nav-link active">Portfolio</a>
+<a href="service.html" class="nav-link">Xizmatlar</a>
+<a href="about.html" class="nav-link">Biz haqimizda</a>
+<a href="vacancy.html" class="nav-link">Vakansiyalar</a>
+</div>
+<div class="nav-actions">
+<a href="consultation.html" class="cta-btn">
+<span>Bog‘lanish</span>
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+<path d="M2 10L10 2M10 2H3M10 2V9" stroke="currentColor" stroke-width="1.5" />
+</svg>
+</a>
+<button type="button" class="nav-burger" id="burgerBtn" aria-label="Navigatsiya menyusini ochish" aria-expanded="false" aria-controls="mobileMenu">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+</div>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Sayt navigatsiyasi" aria-hidden="true">
+<button type="button" class="mobile-close" id="mobileClose" aria-label="Menyuni yopish"></button>
+<a href="index.html">Bosh sahifa</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="service.html">Xizmatlar</a>
+<a href="about.html">Biz haqimizda</a>
+<a href="vacancy.html">Vakansiyalar</a>
+<a href="consultation.html" style="color: var(--accent);">Bog‘lanish</a>
+</div>
+<main id="top" tabindex="-1">
+<header class="portfolio-hero wrap">
+  <div class="portfolio-hero-head">
+    <span class="portfolio-badge">// ISBOTLANGAN MUHANDISLIK TAJRIBASI</span>
+    <h1 class="portfolio-page-title">Yuqori Yuklamali Ishlab Chiqarish Loyihalari</h1>
+    <p class="hero-desc">
+      Milliy to‘lov shlyuzlari, taqsimlangan korporativ ERP ekotizimlari, bulutli core banking va real vaqt kiberxavfsizlik platformalari.
+    </p>
+  </div>
+  <div class="filter-bar" role="toolbar" aria-label="Loyihalar toifasi bo‘yicha filtr">
+    <button type="button" class="filter-btn active" data-filter="all" onclick="filterProjects('all', this)">Barcha Loyihalar <span class="filter-count">6</span></button>
+    <button type="button" class="filter-btn" data-filter="fintech" onclick="filterProjects('fintech', this)">Fintech &amp; To‘lovlar <span class="filter-count">2</span></button>
+    <button type="button" class="filter-btn" data-filter="enterprise" onclick="filterProjects('enterprise', this)">Enterprise ERP <span class="filter-count">1</span></button>
+    <button type="button" class="filter-btn" data-filter="banking" onclick="filterProjects('banking', this)">Bank Tizimlari <span class="filter-count">1</span></button>
+    <button type="button" class="filter-btn" data-filter="telehealth" onclick="filterProjects('telehealth', this)">Telemeditsina <span class="filter-count">1</span></button>
+    <button type="button" class="filter-btn" data-filter="security" onclick="filterProjects('security', this)">SecurityOps <span class="filter-count">1</span></button>
+  </div>
+</header>
+<section class="wrap">
+  <div class="portfolio-stack-container" id="stackContainer">
+    <article class="stack-card-item theme-dark" data-category="fintech" data-card-idx="0">
+      <div class="stack-card-grid">
+        <div class="card-info-col">
+          <div class="card-header-area">
+            <h2 class="card-two-tone-title">
+              <span class="title-white">PayCore</span>
+              <span class="title-grey">Kliring Shlyuzi</span>
+            </h2>
+            <div class="card-tags-row">
+              <span class="capsule-tag accent-pill">15K TPS Peak</span>
+              <span class="capsule-tag">To‘lov Shlyuzi</span>
+              <span class="capsule-tag">Golang</span>
+              <span class="capsule-tag">Kafka</span>
+              <span class="capsule-tag">Redis Cluster</span>
+              <span class="capsule-tag">PostgreSQL</span>
+            </div>
+            <div class="card-desc-row">
+              <svg class="star-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/>
+              </svg>
+              <p class="card-desc-text">
+                15,000 TPS eng yuqori yuklamada 5ms dan kam vaqtda hisob-kitoblarni amalga oshiruvchi, ikki tomonlama buxgalteriya yozuvi auditiga ega ultra-past kechikishli tranzaksiya kliring shlyuzi.
+              </p>
+            </div>
+          </div>
+          <div class="card-bottom-bar">
+            <div class="specs-grid">
+              <div class="spec-unit">
+                <span class="spec-num">15,000</span>
+                <span class="spec-lbl">Maksimal TPS</span>
+              </div>
+              <div class="spec-unit">
+                <span class="spec-num">&lt; 4.2ms</span>
+                <span class="spec-lbl">P99 Kechikish</span>
+              </div>
+              <div class="spec-unit">
+                <span class="spec-num">99.999%</span>
+                <span class="spec-lbl">Ishonchlilik SLA</span>
+              </div>
+            </div>
+            <button type="button" class="card-action-btn open-case-btn" data-case-id="paycore" aria-haspopup="dialog">
+              <span>Texnik Keysni Ko‘rish</span>
+              <svg width="12" height="12" viewBox="0 0 10 10" fill="none">
+                <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="card-media-col">
+          <div class="card-media-showcase">
+            <img src="assets/images/paycore.jpg" alt="PayCore FinTech boshqaruv paneli interfeysi" loading="eager">
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="stack-card-item theme-dark" data-category="enterprise" data-card-idx="1">
+      <div class="stack-card-grid">
+        <div class="card-info-col">
+          <div class="card-header-area">
+            <h2 class="card-two-tone-title">
+              <span class="title-white">ApexSupply</span>
+              <span class="title-grey">Ta'minot Zanjiri ERP</span>
+            </h2>
+            <div class="card-tags-row">
+              <span class="capsule-tag accent-pill">120+ Faol Markaz</span>
+              <span class="capsule-tag">Event Mesh</span>
+              <span class="capsule-tag">Node.js</span>
+              <span class="capsule-tag">Nuxt JS</span>
+              <span class="capsule-tag">Kubernetes</span>
+              <span class="capsule-tag">IoT Telemetriya</span>
+            </div>
+            <div class="card-desc-row">
+              <svg class="star-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/>
+              </svg>
+              <p class="card-desc-text">
+                120 dan ortiq hududiy logistika markazlari bo‘ylab ombor zaxiralarini sinxronlash, avtomatlashtirilgan taqsimlash va real vaqt sovuq zanjir telemetriyasi orqali bekor turish vaqtini 42% ga kamaytirish.
+              </p>
+            </div>
+          </div>
+          <div class="card-bottom-bar">
+            <div class="specs-grid">
+              <div class="spec-unit">
+                <span class="spec-num">120+</span>
+                <span class="spec-lbl">Faol Markazlar</span>
+              </div>
+              <div class="spec-unit">
+                <span class="spec-num">4.8M</span>
+                <span class="spec-lbl">Kunlik Hodisalar</span>
+              </div>
+              <div class="spec-unit">
+                <span class="spec-num">+42%</span>
+                <span class="spec-lbl">Marshrut Tezligi</span>
+              </div>
+            </div>
+            <button type="button" class="card-action-btn open-case-btn" data-case-id="apexsupply" aria-haspopup="dialog">
+              <span>Texnik Keysni Ko‘rish</span>
+              <svg width="12" height="12" viewBox="0 0 10 10" fill="none">
+                <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="card-media-col">
+          <div class="card-media-showcase">
+            <img src="assets/images/apexsupply.jpg" alt="ApexSupply ERP logistika boshqaruv paneli" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="stack-card-item theme-white" data-category="banking" data-card-idx="2">
+      <div class="stack-card-grid">
+        <div class="card-info-col">
+          <div class="card-header-area">
+            <h2 class="card-two-tone-title">
+              <span class="title-white">NexusBank</span>
+              <span class="title-grey">Bulutli Core Banking</span>
+            </h2>
+            <div class="card-tags-row">
+              <span class="capsule-tag accent-pill">850K DAU</span>
+              <span class="capsule-tag">Zero-Trust Arxitektura</span>
+              <span class="capsule-tag">React</span>
+              <span class="capsule-tag">.NET Core</span>
+              <span class="capsule-tag">CyberOps</span>
+              <span class="capsule-tag">PostgreSQL</span>
+            </div>
+            <div class="card-desc-row">
+              <svg class="star-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/>
+              </svg>
+              <p class="card-desc-text">
+                Eski bank monolitini real vaqtda biometrik KYC tekshiruvi, virtual kartalarni tezkor chiqarish va uzluksiz komplayens auditiga ega bulutli mikroservislarga aylantirish.
+              </p>
+            </div>
+          </div>
+          <div class="card-bottom-bar">
+            <div class="specs-grid">
+              <div class="spec-unit">
+                <span class="spec-num">850,000</span>
+                <span class="spec-lbl">Faol Foydalanuvchilar</span>
+              </div>
+              <div class="spec-unit">
+                <span class="spec-num">0 Sekund</span>
+                <span class="spec-lbl">Migratsiya Downtime</span>
+              </div>
+              <div class="spec-unit">
+                <span class="spec-num">100%</span>
+                <span class="spec-lbl">Yozuv Butunligi</span>
+              </div>
+            </div>
+            <button type="button" class="card-action-btn open-case-btn" data-case-id="nexus" aria-haspopup="dialog">
+              <span>Texnik Keysni Ko‘rish</span>
+              <svg width="12" height="12" viewBox="0 0 10 10" fill="none">
+                <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="card-media-col">
+          <div class="card-media-showcase">
+            <img src="assets/images/nexus.jpg" alt="NexusBank Core Banking UI Interface" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="stack-card-item theme-blue" data-category="telehealth" data-card-idx="3">
+      <div class="stack-card-grid">
+        <div class="card-info-col">
+          <div class="card-header-area">
+            <h2 class="card-two-tone-title">
+              <span class="title-white">MediFlow</span>
+              <span class="title-grey">Klinik Telemeditsina</span>
+            </h2>
+            <div class="card-tags-row">
+              <span class="capsule-tag accent-pill">2.4M Konsultatsiya</span>
+              <span class="capsule-tag">WebRTC Past Kechikish</span>
+              <span class="capsule-tag">FastAPI</span>
+              <span class="capsule-tag">HIPAA Standartlari</span>
+              <span class="capsule-tag">EKG Oqimi</span>
+            </div>
+            <div class="card-desc-row">
+              <svg class="star-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/>
+              </svg>
+              <p class="card-desc-text">
+                120ms dan past WebRTC kechikishiga ega klinik video striming platformasi, real vaqt biometrik telemetriya, shifrlangan elektron tibbiy kartalar (EHR) va avtomatlashtirilgan retseptlar.
+              </p>
+            </div>
+          </div>
+          <div class="card-bottom-bar">
+            <div class="specs-grid">
+              <div class="spec-unit">
+                <span class="spec-num">2.4M</span>
+                <span class="spec-lbl">Konsultatsiyalar</span>
+              </div>
+              <div class="spec-unit">
+                <span class="spec-num">&lt; 120ms</span>
+                <span class="spec-lbl">WebRTC RTT</span>
+              </div>
+              <div class="spec-unit">
+                <span class="spec-num">E2E</span>
+                <span class="spec-lbl">Shifrlangan EHR</span>
+              </div>
+            </div>
+            <button type="button" class="card-action-btn open-case-btn" data-case-id="mediflow" aria-haspopup="dialog">
+              <span>Texnik Keysni Ko‘rish</span>
+              <svg width="12" height="12" viewBox="0 0 10 10" fill="none">
+                <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="card-media-col">
+          <div class="card-media-showcase">
+            <img src="assets/images/mediflow.jpg" alt="MediFlow telemeditsina va biometrik klinik boshqaruv paneli" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="stack-card-item theme-gray" data-category="security" data-card-idx="4">
+      <div class="stack-card-grid">
+        <div class="card-info-col">
+          <div class="card-header-area">
+            <h2 class="card-two-tone-title">
+              <span class="title-white">CloudSentinel</span>
+              <span class="title-grey">Avtonom SIEM</span>
+            </h2>
+            <div class="card-tags-row">
+              <span class="capsule-tag accent-pill">50 GB/s Oqim</span>
+              <span class="capsule-tag">Kernel eBPF</span>
+              <span class="capsule-tag">Rust</span>
+              <span class="capsule-tag">ClickHouse</span>
+              <span class="capsule-tag">Kafka</span>
+            </div>
+            <div class="card-desc-row">
+              <svg class="star-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/>
+              </svg>
+              <p class="card-desc-text">
+                Yadro (Kernel) darajasidagi tarmoq monitoringi va avtonom kiberxavfsizlik tahdidlarini aniqlash tizimi. 50GB/s jonli paket oqimini 10ms dan kam vaqtda tahlil qiladi.
+              </p>
+            </div>
+          </div>
+          <div class="card-bottom-bar">
+            <div class="specs-grid">
+              <div class="spec-unit">
+                <span class="spec-num">50 GB/s</span>
+                <span class="spec-lbl">Tarmoq Oqimi</span>
+              </div>
+              <div class="spec-unit">
+                <span class="spec-num">&lt; 10ms</span>
+                <span class="spec-lbl">Aniqlash Vaqti</span>
+              </div>
+              <div class="spec-unit">
+                <span class="spec-num">0%</span>
+                <span class="spec-lbl">Agent Yuklamasi</span>
+              </div>
+            </div>
+            <button type="button" class="card-action-btn open-case-btn" data-case-id="cloudsentinel" aria-haspopup="dialog">
+              <span>Texnik Keysni Ko‘rish</span>
+              <svg width="12" height="12" viewBox="0 0 10 10" fill="none">
+                <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="card-media-col">
+          <div class="card-media-showcase">
+            <img src="assets/images/cloudsentinel.jpg" alt="CloudSentinel tahdidlar monitoringi va tarmoq SIEM interfeysi" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="stack-card-item theme-dark" data-category="fintech" data-card-idx="5">
+      <div class="stack-card-grid">
+        <div class="card-info-col">
+          <div class="card-header-area">
+            <h2 class="card-two-tone-title">
+              <span class="title-white">TradeSphere</span>
+              <span class="title-grey">HFT Likvidlik Terminali</span>
+            </h2>
+            <div class="card-tags-row">
+              <span class="capsule-tag accent-pill">250K Buyurtma/sek</span>
+              <span class="capsule-tag">C++ Dvigateli</span>
+              <span class="capsule-tag">WebSocket L3</span>
+              <span class="capsule-tag">Memory-Mapped IO</span>
+              <span class="capsule-tag">gRPC</span>
+            </div>
+            <div class="card-desc-row">
+              <svg class="star-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/>
+              </svg>
+              <p class="card-desc-text">
+                100 mikrsoniyadan past deterministik buyurtmalar kitobini moslashtirish mexanizmi, real vaqt bozor chuqurligi strimingi va global birjalarda ko‘p maydonli likvidlik marshrutlash.
+              </p>
+            </div>
+          </div>
+          <div class="card-bottom-bar">
+            <div class="specs-grid">
+              <div class="spec-unit">
+                <span class="spec-num">250,000</span>
+                <span class="spec-lbl">Buyurtma / Sek</span>
+              </div>
+              <div class="spec-unit">
+                <span class="spec-num">&lt; 100µs</span>
+                <span class="spec-lbl">Moslashish Kechikishi</span>
+              </div>
+              <div class="spec-unit">
+                <span class="spec-num">99.999%</span>
+                <span class="spec-lbl">Uptime SLA</span>
+              </div>
+            </div>
+            <button type="button" class="card-action-btn open-case-btn" data-case-id="tradesphere" aria-haspopup="dialog">
+              <span>Texnik Keysni Ko‘rish</span>
+              <svg width="12" height="12" viewBox="0 0 10 10" fill="none">
+                <path d="M1 9L9 1M9 1H3M9 1V7" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="card-media-col">
+          <div class="card-media-showcase">
+            <img src="assets/images/tradesphere.jpg" alt="TradeSphere yuqori chastotali savdo terminali interfeysi" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Technical Case Study Modal Overlay -->
+<div class="case-modal-overlay" id="caseModalOverlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalProjectTitle">
+  <div class="case-modal-card">
+    <button type="button" class="case-modal-close" id="caseModalClose" aria-label="Yopish">&times;</button>
+    <div class="case-modal-header">
+      <span class="case-modal-badge" id="modalProjectBadge">FINTECH &amp; KLIRING</span>
+      <h2 class="case-modal-title" id="modalProjectTitle">PayCore Kliring Tizimi</h2>
+      <p class="case-modal-subtitle" id="modalProjectSubtitle">15,000 TPS eng yuqori yuklamada 5ms dan kam kechikishli milliy tranzaksiya shlyuzi.</p>
+    </div>
+    <div class="case-modal-body">
+      <div class="case-modal-metrics" id="modalProjectMetrics">
+        <!-- Dynamic Metrics -->
+      </div>
+      <div class="case-modal-section">
+        <h3 class="case-sec-title">1. Biznes Vazifasi &amp; Muammo</h3>
+        <p class="case-sec-text" id="modalProjectProblem"></p>
+      </div>
+      <div class="case-modal-section">
+        <h3 class="case-sec-title">2. Arxitekturaviy &amp; Texnik Yechim</h3>
+        <p class="case-sec-text" id="modalProjectSolution"></p>
+      </div>
+      <div class="case-modal-section">
+        <h3 class="case-sec-title">3. Ishlatilgan Texnologiyalar &amp; Stack</h3>
+        <div class="case-tech-pills" id="modalProjectStack"></div>
+      </div>
+    </div>
+    <div class="case-modal-footer">
+      <a href="consultation.html" class="cta-btn primary-accent" id="modalConsultBtn">
+        <span>Ushbu Yo‘nalishda Loyiha Boshlash →</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<section class="portfolio-cta-banner wrap">
+  <div class="cta-banner-card">
+    <h2 class="cta-banner-title">Murakkab Arxitekturaviy Vazifangiz Bormi?</h2>
+    <p class="cta-banner-sub">
+      Biz ekstremal ishlab chiqarish yuklamalariga bardosh beradigan mukammal tizimlarni quramiz. Bosh muhandislarimiz bilan to‘g‘ridan-to‘g‘ri bog‘laning.
+    </p>
+    <div class="cta-banner-buttons">
+      <a href="service.html#calculator" class="cta-primary-link">
+        <span>Arxitektura Konsultatsiyasini Belgilash →</span>
+      </a>
+      <a href="https://t.me/topdevadmin" target="_blank" rel="noopener" class="cta-secondary-link">
+        <span>Telegram @topdevadmin ↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="minimal-footer wrap">
+<div class="footer-minimal-card" data-reveal>
+<div class="footer-minimal-middle">
+<div class="footer-min-col">
+<span class="footer-brand-title">TOPDEV<span class="dot">.</span></span>
+<span class="footer-brand-desc">Yuqori Yuklamali Raqamli Muhandislik</span>
+</div>
+<div class="footer-min-col">
+<span class="footer-col-header">TO‘G‘RIDAN-TO‘G‘RI HAVOLALAR</span>
+<div class="footer-links-row">
+<a href="portfolio.html">Portfolio</a>
+<a href="service.html">Xizmatlar</a>
+<a href="index.html#stacks">Texnologiyalar</a>
+<a href="mailto:info@topdev.uz">Bog‘lanish</a>
+</div>
+</div>
+<div class="footer-min-col">
+<span class="footer-col-header">TARMOQLAR</span>
+<div class="footer-links-row">
+<a href="https://t.me/topdevuz" target="_blank" rel="noopener">Telegram ↗</a>
+<a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a>
+<a href="https://github.com" target="_blank" rel="noopener">GitHub ↗</a>
+</div>
+</div>
+<div class="footer-min-col">
+<span class="footer-col-header">BOSH QARORGOH</span>
+<span class="footer-text-muted">Toshkent, O‘zbekiston</span>
+</div>
+</div>
+<div class="footer-minimal-bottom">
+<span>© 2026 TOPDEV MCHJ. BARCHA HUQUQLAR HIMOYALANGAN.</span>
+<span>YUQORI YUKLAMA VA ISHONCHLILIK UCHUN</span>
+</div>
+</div>
+</footer>
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/portfolio.js" defer></script>
+</body>
+</html>

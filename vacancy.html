@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="uz" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Vakansiyalar — TOPDEV Yuqori Yuklamali IT Muhandislik</title>
+<meta name="description" content="TOPDEV ochiq ish o'rinlari: Senior Backend (Go/Python), DevOps, Frontend (React/TS), Mobile (Flutter), QA Automation va Project Management vakansiyalari. Yuqori yuklamali tizimlar muhandisligi jamoasiga qo'shiling.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/vacancy.css">
+</head>
+<body>
+<a href="#top" class="skip-link">Asosiy kontentga o‘tish</a>
+<div class="navbar-wrapper" id="navbarWrapper">
+<nav class="navbar wrap" id="navbar" aria-label="Asosiy navigatsiya">
+<a href="index.html" class="logo-mark">
+TOPDEV
+</a>
+<div class="nav-links">
+<a href="index.html" class="nav-link">Bosh sahifa</a>
+<a href="portfolio.html" class="nav-link">Portfolio</a>
+<a href="service.html" class="nav-link">Xizmatlar</a>
+<a href="about.html" class="nav-link">Biz haqimizda</a>
+<a href="vacancy.html" class="nav-link active">Vakansiyalar</a>
+</div>
+<div class="nav-actions">
+<a href="consultation.html" class="cta-btn">
+<span>Bog‘lanish</span>
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+<path d="M2 10L10 2M10 2H3M10 2V9" stroke="currentColor" stroke-width="1.5" />
+</svg>
+</a>
+<button type="button" class="nav-burger" id="burgerBtn" aria-label="Navigatsiya menyusini ochish" aria-expanded="false" aria-controls="mobileMenu">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+</div>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Sayt navigatsiyasi" aria-hidden="true">
+<button type="button" class="mobile-close" id="mobileClose" aria-label="Menyuni yopish"></button>
+<a href="index.html">Bosh sahifa</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="service.html">Xizmatlar</a>
+<a href="about.html">Biz haqimizda</a>
+<a href="vacancy.html">Vakansiyalar</a>
+<a href="consultation.html" style="color: var(--accent);">Bog‘lanish</a>
+</div>
+<main id="top" tabindex="-1">
+<section class="vacancies-container wrap">
+<div class="vacancies-controls-bar" data-reveal>
+<div class="controls-top-row">
+<div class="vacancies-search-wrap">
+<div class="vacancies-search-icon" aria-hidden="true">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+</svg>
+</div>
+<input type="text" id="vacancySearchInput" class="vacancies-search-input" placeholder="Lavozim yoki stack bo'yicha qidirish (Go, Python, DevOps, React...)" aria-label="Vakansiyalarni qidirish">
+</div>
+<div class="vacancies-count-badge">
+Ochiq lavozimlar: <span id="vacanciesCount" class="count-num">7</span>
+</div>
+</div>
+<div class="vacancy-filter-chips" role="toolbar" aria-label="Vakansiyalar bo'yicha filtrlar">
+<button type="button" class="vacancy-filter-chip active" data-filter="all">Barchasi</button>
+<button type="button" class="vacancy-filter-chip" data-filter="backend">Backend &amp; Arxitektura</button>
+<button type="button" class="vacancy-filter-chip" data-filter="devops">DevOps &amp; Cloud</button>
+<button type="button" class="vacancy-filter-chip" data-filter="frontend-mobile">Frontend &amp; Mobile</button>
+<button type="button" class="vacancy-filter-chip" data-filter="qa">QA &amp; Xavfsizlik</button>
+<button type="button" class="vacancy-filter-chip" data-filter="management">Management</button>
+</div>
+</div>
+<div class="vacancies-list" id="vacanciesList">
+<article class="vacancy-card" data-category="backend" data-reveal>
+<div class="vacancy-card-main">
+<div class="vacancy-top-meta">
+<div class="vacancy-tags-left">
+<span class="v-tag v-tag-dept">Engineering</span>
+<span class="v-tag v-tag-level">Senior / Lead</span>
+<span class="v-tag v-tag-type">Full-time / Hybrid</span>
+</div>
+<span class="v-tag-salary">
+<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+<polyline points="17 6 23 6 23 12"></polyline>
+</svg>
+$2,500 – $4,500+
+</span>
+</div>
+<h2 class="vacancy-card-title">Senior / Lead Go Engineer (High-Load Systems)</h2>
+<p class="vacancy-card-desc">
+Yuqori yuklamali to'lov shlyuzlari, milliy kliring tizimlari va soniyasiga 50,000+ tranzaksiyalarni qayta
+ishlovchi taqsimlangan mikroservislar arxitekturasini yaratish va optimallashtirish.
+</p>
+<div class="vacancy-tech-row">
+<span class="tech-pill">Go (Golang)</span>
+<span class="tech-pill">PostgreSQL</span>
+<span class="tech-pill">Apache Kafka</span>
+<span class="tech-pill">Redis</span>
+<span class="tech-pill">gRPC / Protobuf</span>
+<span class="tech-pill">Docker &amp; K8s</span>
+<span class="tech-pill">Prometheus</span>
+</div>
+<div class="vacancy-action-row">
+<button type="button" class="vacancy-details-toggle" aria-expanded="false">
+<span class="toggle-text">Batafsil talablar</span>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="vacancy-action-buttons">
+<a href="https://t.me/topdevadmin" target="_blank" rel="noopener" class="btn-telegram-quick" title="Telegram orqali bog'lanish">
+<span>Telegram</span> ↗
+</a>
+<button type="button" class="btn-apply-direct" data-apply-role="Senior / Lead Go Engineer">
+<span>Ariza topshirish</span>
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+<path d="M2 10L10 2M10 2H3M10 2V9" stroke="currentColor" stroke-width="1.5" />
+</svg>
+</button>
+</div>
+</div>
+</div>
+<div class="vacancy-details-drawer">
+<div class="drawer-inner-grid">
+<div>
+<div class="drawer-col-title">Asosiy Vazifalar</div>
+<ul class="drawer-list">
+<li>Go tilida yuqori unumdorlikka ega, xavfsiz va ishonchli mikroservislar yadrosini ishlab chiqish.
+</li>
+<li>PostgreSQL ma'lumotlar bazasida murakkab sharding, replikatsiya va indeks optimallashtirish.</li>
+<li>Kafka orqali hodisalarga asoslangan (Event-Driven) asinxron arxitekturani loyihalash.</li>
+<li>Koddagi qiyin bottleneck (tor joylar) va xotira boshqaruvini profiling (pprof) qilish.</li>
+</ul>
+</div>
+<div>
+<div class="drawer-col-title">Biz Kutayotgan Talablar</div>
+<ul class="drawer-list">
+<li>Go tilida 4+ yillik amaliy production tajribasi.</li>
+<li>Concurrency (goroutines, channels, sync primitives) tamoyillarini mukammal bilish.</li>
+<li>Relyatsion MB (PostgreSQL) va NoSQL (Redis, ClickHouse) bilan ishlash malakasi.</li>
+<li>Microservices, gRPC, REST, CI/CD va Docker konteynerizatsiyasi bo'yicha kuchli bilim.</li>
+</ul>
+</div>
+<div>
+<div class="drawer-col-title">Biz Taklif Qilamiz</div>
+<ul class="drawer-list">
+<li>Bozor darajasidan yuqori, valyutaga bog'langan barqaror maosh.</li>
+<li>Har 6 oyda shaffof texnik ko'rik (grade review) va daromad qayta ko'rib chiqilishi.</li>
+<li>Top MacBook Pro va zarur ergonomik uskunalar.</li>
+<li>Xalqaro IT sertifikatlar va konferensiyalar to'lovi.</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<article class="vacancy-card" data-category="backend" data-reveal>
+<div class="vacancy-card-main">
+<div class="vacancy-top-meta">
+<div class="vacancy-tags-left">
+<span class="v-tag v-tag-dept">Engineering</span>
+<span class="v-tag v-tag-level">Senior</span>
+<span class="v-tag v-tag-type">Full-time / Hybrid</span>
+</div>
+<span class="v-tag-salary">
+<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+<polyline points="17 6 23 6 23 12"></polyline>
+</svg>
+$2,200 – $3,800
+</span>
+</div>
+<h2 class="vacancy-card-title">Senior Python / FastAPI Engineer (ERP &amp; Data Platforms)</h2>
+<p class="vacancy-card-desc">
+Katta korporativ ERP/CRM platformalari, asinxron biznes jarayonlari va katta ma'lumotlar oqimini tahlil
+qiluvchi analitik backend modullarini yaratish.
+</p>
+<div class="vacancy-tech-row">
+<span class="tech-pill">Python 3.12+</span>
+<span class="tech-pill">FastAPI</span>
+<span class="tech-pill">Asyncio</span>
+<span class="tech-pill">PostgreSQL / SQLAlchemy</span>
+<span class="tech-pill">ClickHouse</span>
+<span class="tech-pill">RabbitMQ / Celery</span>
+<span class="tech-pill">Redis</span>
+</div>
+<div class="vacancy-action-row">
+<button type="button" class="vacancy-details-toggle" aria-expanded="false">
+<span class="toggle-text">Batafsil talablar</span>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="vacancy-action-buttons">
+<a href="https://t.me/topdevadmin" target="_blank" rel="noopener" class="btn-telegram-quick" title="Telegram orqali bog'lanish">
+<span>Telegram</span> ↗
+</a>
+<button type="button" class="btn-apply-direct" data-apply-role="Senior Python / FastAPI Engineer">
+<span>Ariza topshirish</span>
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+<path d="M2 10L10 2M10 2H3M10 2V9" stroke="currentColor" stroke-width="1.5" />
+</svg>
+</button>
+</div>
+</div>
+</div>
+<div class="vacancy-details-drawer">
+<div class="drawer-inner-grid">
+<div>
+<div class="drawer-col-title">Asosiy Vazifalar</div>
+<ul class="drawer-list">
+<li>FastAPI va Asyncio asosida keng masshtablanuvchi korporativ backend modullarini ishlab chiqish.
+</li>
+<li>ClickHouse va PostgreSQL da katta hajmdagi tranzaksion ma'lumotlarni qayta ishlash.</li>
+<li>Murakkab tashqi integratsiyalar (bank API lari, billing, soliq tizimlari) barpo etish.</li>
+<li>Tizim arxitekturasi uchun texnik hujjatlar (RFC/ADR) tayyorlash.</li>
+</ul>
+</div>
+<div>
+<div class="drawer-col-title">Biz Kutayotgan Talablar</div>
+<ul class="drawer-list">
+<li>Python dasturlash tilida 4+ yillik production tajribasi.</li>
+<li>FastAPI, Pydantic v2, SQLAlchemy 2.0 va Asyncio bilan chuqur amaliyot.</li>
+<li>Relyatsion va tahliliy ma'lumotlar bazalarini optimallashtirish bilimlari.</li>
+<li>Tizim xavfsizligi (OAuth2, JWT, RBAC) va test yozish madaniyati (Pytest).</li>
+</ul>
+</div>
+<div>
+<div class="drawer-col-title">Biz Taklif Qilamiz</div>
+<ul class="drawer-list">
+<li>Raqobatbardosh oylik maosh va muvaffaqiyatli loyihalar uchun yillik bonuslar.</li>
+<li>Toshkent markazida qulay ofis yoki gibrid tartib.</li>
+<li>Tibbiy sug'urta va sport a'zoligi kompensatsiyasi.</li>
+<li>Oliy toifali muhandislar bilan o'sish muhiti.</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<article class="vacancy-card" data-category="devops" data-reveal>
+<div class="vacancy-card-main">
+<div class="vacancy-top-meta">
+<div class="vacancy-tags-left">
+<span class="v-tag v-tag-dept">Infrastructure</span>
+<span class="v-tag v-tag-level">Lead</span>
+<span class="v-tag v-tag-type">Remote / Hybrid</span>
+</div>
+<span class="v-tag-salary">
+<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+<polyline points="17 6 23 6 23 12"></polyline>
+</svg>
+$2,800 – $4,800
+</span>
+</div>
+<h2 class="vacancy-card-title">Lead DevOps &amp; Cloud Infrastructure Engineer</h2>
+<p class="vacancy-card-desc">
+99.99% SLA barqarorlik kafolatiga ega Kubernetes klasterlari, Infrastructure as Code (Terraform),
+avtomatlashtirilgan CI/CD quvurlari va xavfsizlik monitoringi.
+</p>
+<div class="vacancy-tech-row">
+<span class="tech-pill">Kubernetes</span>
+<span class="tech-pill">Terraform</span>
+<span class="tech-pill">Helm</span>
+<span class="tech-pill">GitLab CI/CD</span>
+<span class="tech-pill">Prometheus &amp; Grafana</span>
+<span class="tech-pill">Linux Hardening</span>
+<span class="tech-pill">AWS / Bare-Metal</span>
+</div>
+<div class="vacancy-action-row">
+<button type="button" class="vacancy-details-toggle" aria-expanded="false">
+<span class="toggle-text">Batafsil talablar</span>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="vacancy-action-buttons">
+<a href="https://t.me/topdevadmin" target="_blank" rel="noopener" class="btn-telegram-quick" title="Telegram orqali bog'lanish">
+<span>Telegram</span> ↗
+</a>
+<button type="button" class="btn-apply-direct" data-apply-role="Lead DevOps & Cloud Engineer">
+<span>Ariza topshirish</span>
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+<path d="M2 10L10 2M10 2H3M10 2V9" stroke="currentColor" stroke-width="1.5" />
+</svg>
+</button>
+</div>
+</div>
+</div>
+<div class="vacancy-details-drawer">
+<div class="drawer-inner-grid">
+<div>
+<div class="drawer-col-title">Asosiy Vazifalar</div>
+<ul class="drawer-list">
+<li>Production Kubernetes klasterlarini boshqarish, masshtablash va zero-downtime yangilanishlarni
+ta'minlash.</li>
+<li>Terraform yordamida butun infratuzilmani kod shaklida (IaC) standartlashtirish.</li>
+<li>Tezkor va xavfsiz CI/CD (GitLab CI / GitHub Actions) quvurlarini loyihalash.</li>
+<li>24/7 monitoring, metrikalar (Prometheus, VictoriaMetrics) va log agregatsiyasi (Loki/ELK).</li>
+</ul>
+</div>
+<div>
+<div class="drawer-col-title">Biz Kutayotgan Talablar</div>
+<ul class="drawer-list">
+<li>DevOps / SRE yo'nalishida 4+ yillik amaliy tajriba.</li>
+<li>Kubernetes, Helm va Ingress kontrollerlari bilan professional amaliyot.</li>
+<li>Linux OS darajasidagi tarmoq protokollari (TCP/IP, BGP, iptables) va xavfsizlik bilimlari.</li>
+<li>Disaster Recovery, backup va High Availability (HA) arxitekturasini loyihalash qobiliyati.</li>
+</ul>
+</div>
+<div>
+<div class="drawer-col-title">Biz Taklif Qilamiz</div>
+<ul class="drawer-list">
+<li>To'liq masofaviy (Remote) yoki qulay gibrid rejimda ishlash imkoniyati.</li>
+<li>Yuqori byudjetli server infratuzilmasi va mustaqil texnik qarorlar erkinligi.</li>
+<li>Eng yuqori darajadagi barqaror maosh va jamoa yetakchiligi maqomi.</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<article class="vacancy-card" data-category="frontend-mobile" data-reveal>
+<div class="vacancy-card-main">
+<div class="vacancy-top-meta">
+<div class="vacancy-tags-left">
+<span class="v-tag v-tag-dept">Frontend</span>
+<span class="v-tag v-tag-level">Senior</span>
+<span class="v-tag v-tag-type">Full-time / Hybrid</span>
+</div>
+<span class="v-tag-salary">
+<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+<polyline points="17 6 23 6 23 12"></polyline>
+</svg>
+$2,000 – $3,500
+</span>
+</div>
+<h2 class="vacancy-card-title">Senior Frontend Engineer (React / TypeScript / Next.js)</h2>
+<p class="vacancy-card-desc">
+Moliya, monitoring va korporativ boshqaruv tizimlari uchun real-time ma'lumotlarni kechikishsiz aks
+ettiruvchi murakkab va tezkor web interfeyslar.
+</p>
+<div class="vacancy-tech-row">
+<span class="tech-pill">TypeScript</span>
+<span class="tech-pill">React 18+</span>
+<span class="tech-pill">Next.js (App Router)</span>
+<span class="tech-pill">WebSockets</span>
+<span class="tech-pill">Zustand / TanStack Query</span>
+<span class="tech-pill">Tailwind CSS / Vanilla CSS</span>
+</div>
+<div class="vacancy-action-row">
+<button type="button" class="vacancy-details-toggle" aria-expanded="false">
+<span class="toggle-text">Batafsil talablar</span>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="vacancy-action-buttons">
+<a href="https://t.me/topdevadmin" target="_blank" rel="noopener" class="btn-telegram-quick" title="Telegram orqali bog'lanish">
+<span>Telegram</span> ↗
+</a>
+<button type="button" class="btn-apply-direct" data-apply-role="Senior Frontend Engineer">
+<span>Ariza topshirish</span>
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+<path d="M2 10L10 2M10 2H3M10 2V9" stroke="currentColor" stroke-width="1.5" />
+</svg>
+</button>
+</div>
+</div>
+</div>
+<div class="vacancy-details-drawer">
+<div class="drawer-inner-grid">
+<div>
+<div class="drawer-col-title">Asosiy Vazifalar</div>
+<ul class="drawer-list">
+<li>Next.js va TypeScript asosida yuqori unumdorlikdagi web ilovalarni ishlab chiqish.</li>
+<li>Real-time grafika va jadvallar (WebSockets, Canvas) yordamida katta ma'lumotlar oqimini
+vizualizatsiya qilish.</li>
+<li>Kompaniya dizayn tizimi komponentlarini modulli va mustahkam arxitekturada yaratish.</li>
+<li>Web Core Vitals (LCP, INP, CLS) ko'rsatkichlarini optimallashtirish.</li>
+</ul>
+</div>
+<div>
+<div class="drawer-col-title">Biz Kutayotgan Talablar</div>
+<ul class="drawer-list">
+<li>TypeScript va zamonaviy React ekotizimida 4+ yillik amaliy tajriba.</li>
+<li>Server-Side Rendering (SSR) va Client Rendering nozikliklarini chuqur tushunish.</li>
+<li>Qat'iy tipizatsiya, toza kod va test yozish madaniyati (Vitest, React Testing Library).</li>
+<li>Murakkab interfeyslar va animatsiyalar bilan ishlash tajribasi.</li>
+</ul>
+</div>
+<div>
+<div class="drawer-col-title">Biz Taklif Qilamiz</div>
+<ul class="drawer-list">
+<li>Raqobatbardosh maosh va muntazam 6 oylik qayta ko'rib chiqish.</li>
+<li>Zamonaviy frontend muhandislik amaliyotlari va yangi texnologiyalar erkinligi.</li>
+<li>Top uskunalar va professional jamoaviy muhit.</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<article class="vacancy-card" data-category="frontend-mobile" data-reveal>
+<div class="vacancy-card-main">
+<div class="vacancy-top-meta">
+<div class="vacancy-tags-left">
+<span class="v-tag v-tag-dept">Mobile</span>
+<span class="v-tag v-tag-level">Senior</span>
+<span class="v-tag v-tag-type">Full-time / Hybrid</span>
+</div>
+<span class="v-tag-salary">
+<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+<polyline points="17 6 23 6 23 12"></polyline>
+</svg>
+$2,000 – $3,600
+</span>
+</div>
+<h2 class="vacancy-card-title">Senior Mobile Engineer (Flutter / iOS Native)</h2>
+<p class="vacancy-card-desc">
+Bank, to'lov va xizmat ko'rsatish sohalari uchun xavfsiz, offline-first va biometrik himoyalangan mobil
+ilovalarni ishlab chiqish.
+</p>
+<div class="vacancy-tech-row">
+<span class="tech-pill">Flutter / Dart</span>
+<span class="tech-pill">Swift (iOS)</span>
+<span class="tech-pill">BLoC / Cubit</span>
+<span class="tech-pill">Clean Architecture</span>
+<span class="tech-pill">Biometrics / Security</span>
+<span class="tech-pill">Fastlane CI/CD</span>
+</div>
+<div class="vacancy-action-row">
+<button type="button" class="vacancy-details-toggle" aria-expanded="false">
+<span class="toggle-text">Batafsil talablar</span>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="vacancy-action-buttons">
+<a href="https://t.me/topdevadmin" target="_blank" rel="noopener" class="btn-telegram-quick" title="Telegram orqali bog'lanish">
+<span>Telegram</span> ↗
+</a>
+<button type="button" class="btn-apply-direct" data-apply-role="Senior Mobile Engineer">
+<span>Ariza topshirish</span>
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+<path d="M2 10L10 2M10 2H3M10 2V9" stroke="currentColor" stroke-width="1.5" />
+</svg>
+</button>
+</div>
+</div>
+</div>
+<div class="vacancy-details-drawer">
+<div class="drawer-inner-grid">
+<div>
+<div class="drawer-col-title">Asosiy Vazifalar</div>
+<ul class="drawer-list">
+<li>Flutter yordamida yuqori unumdorlikdagi iOS va Android ilovalarini ishlab chiqish.</li>
+<li>Native platform modullari (Swift/Kotlin) va tashqi SDK lar bilan integratsiya qilish.</li>
+<li>App Store va Google Play ga CI/CD orqali avtomatlashtirilgan reliz jarayonlarini yo'lga qo'yish.
+</li>
+<li>Xavfsizlik (SSL Pinning, biometrics, secure storage) talablariga to'liq rioya qilish.</li>
+</ul>
+</div>
+<div>
+<div class="drawer-col-title">Biz Kutayotgan Talablar</div>
+<ul class="drawer-list">
+<li>Flutter/Dart sohasida 3.5+ yillik production ilovalar yaratish tajribasi.</li>
+<li>BLoC state management va Clean Architecture tamoyillarini mukammal bilish.</li>
+<li>Native iOS (Swift) yoki Android (Kotlin) bilan ishlash tajribasi.</li>
+<li>App Store va Google Play da nashr etilgan real production ilovalar portfolioga ega bo'lish.</li>
+</ul>
+</div>
+<div>
+<div class="drawer-col-title">Biz Taklif Qilamiz</div>
+<ul class="drawer-list">
+<li>Eng so'nggi sinov smartfonlari va Mac qurilmalari.</li>
+<li>Katta fintech va korporativ mobil ekotizimlarda yetakchilik tajribasi.</li>
+<li>Raqobatbardosh maosh va moslashuvchan jadval.</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<article class="vacancy-card" data-category="qa" data-reveal>
+<div class="vacancy-card-main">
+<div class="vacancy-top-meta">
+<div class="vacancy-tags-left">
+<span class="v-tag v-tag-dept">QA &amp; Security</span>
+<span class="v-tag v-tag-level">Senior</span>
+<span class="v-tag v-tag-type">Full-time / Remote</span>
+</div>
+<span class="v-tag-salary">
+<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+<polyline points="17 6 23 6 23 12"></polyline>
+</svg>
+$1,600 – $2,800
+</span>
+</div>
+<h2 class="vacancy-card-title">Senior QA Automation Engineer (Python / Playwright)</h2>
+<p class="vacancy-card-desc">
+Yuqori yuklamali backend va web platformalarni avtomatik testlash, yuklama testlari (load/stress testing)
+va sifat nazorati quvurlarini yaratish.
+</p>
+<div class="vacancy-tech-row">
+<span class="tech-pill">Python</span>
+<span class="tech-pill">Playwright</span>
+<span class="tech-pill">Pytest</span>
+<span class="tech-pill">k6 / Locust</span>
+<span class="tech-pill">Postman / Newman</span>
+<span class="tech-pill">CI/CD Integration</span>
+</div>
+<div class="vacancy-action-row">
+<button type="button" class="vacancy-details-toggle" aria-expanded="false">
+<span class="toggle-text">Batafsil talablar</span>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="vacancy-action-buttons">
+<a href="https://t.me/topdevadmin" target="_blank" rel="noopener" class="btn-telegram-quick" title="Telegram orqali bog'lanish">
+<span>Telegram</span> ↗
+</a>
+<button type="button" class="btn-apply-direct" data-apply-role="Senior QA Automation Engineer">
+<span>Ariza topshirish</span>
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+<path d="M2 10L10 2M10 2H3M10 2V9" stroke="currentColor" stroke-width="1.5" />
+</svg>
+</button>
+</div>
+</div>
+</div>
+<div class="vacancy-details-drawer">
+<div class="drawer-inner-grid">
+<div>
+<div class="drawer-col-title">Asosiy Vazifalar</div>
+<ul class="drawer-list">
+<li>E2E, API va integratsion testlarni avtomatlashtirish framework'ini ishlab chiqish.</li>
+<li>k6 va Locust yordamida yuqori yuklama (load &amp; stress testing) sinovlarini o'tkazish.</li>
+<li>GitLab CI/CD tizimiga avtotestlarni integratsiya qilish va sifat hisobotlarini generatsiya qilish.
+</li>
+<li>Xavfsizlik sinovlari (OWASP Top 10) bo'yicha tahlillar olib borish.</li>
+</ul>
+</div>
+<div>
+<div class="drawer-col-title">Biz Kutayotgan Talablar</div>
+<ul class="drawer-list">
+<li>QA Automation sohasida 3+ yillik amaliy tajriba.</li>
+<li>Python, Pytest va Playwright/Selenium bo'yicha kuchli bilim.</li>
+<li>REST va gRPC API larni avtomatlashtirilgan tekshirish tajribasi.</li>
+<li>Katta yuklamadagi tizimlarning ishlash chegaralarini aniqlash malakasi.</li>
+</ul>
+</div>
+<div>
+<div class="drawer-col-title">Biz Taklif Qilamiz</div>
+<ul class="drawer-list">
+<li>To'liq masofaviy (remote) ishlash erkinligi.</li>
+<li>Shaffof texnik rivojlanish va professional treninglar.</li>
+<li>Muntazam oylik maosh va natijalarga asoslangan bonuslar.</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<article class="vacancy-card" data-category="management" data-reveal>
+<div class="vacancy-card-main">
+<div class="vacancy-top-meta">
+<div class="vacancy-tags-left">
+<span class="v-tag v-tag-dept">Management</span>
+<span class="v-tag v-tag-level">Middle+ / Senior</span>
+<span class="v-tag v-tag-type">Full-time</span>
+</div>
+<span class="v-tag-salary">
+<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+<polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+<polyline points="17 6 23 6 23 12"></polyline>
+</svg>
+$1,500 – $2,700
+</span>
+</div>
+<h2 class="vacancy-card-title">Technical Project Manager (Fintech &amp; Enterprise)</h2>
+<p class="vacancy-card-desc">
+Murakkab IT loyihalarda jamoalararo samarali kommunikatsiya, sprintlarni boshqarish, xatarlarni
+kamaytirish va texnik natijalarni o'z vaqtida yetkazish.
+</p>
+<div class="vacancy-tech-row">
+<span class="tech-pill">Agile / Scrum / Kanban</span>
+<span class="tech-pill">Jira &amp; Confluence</span>
+<span class="tech-pill">SDLC Management</span>
+<span class="tech-pill">Technical RFCs</span>
+<span class="tech-pill">Risk Management</span>
+<span class="tech-pill">Client Communication</span>
+</div>
+<div class="vacancy-action-row">
+<button type="button" class="vacancy-details-toggle" aria-expanded="false">
+<span class="toggle-text">Batafsil talablar</span>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="vacancy-action-buttons">
+<a href="https://t.me/topdevadmin" target="_blank" rel="noopener" class="btn-telegram-quick" title="Telegram orqali bog'lanish">
+<span>Telegram</span> ↗
+</a>
+<button type="button" class="btn-apply-direct" data-apply-role="Technical Project Manager">
+<span>Ariza topshirish</span>
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+<path d="M2 10L10 2M10 2H3M10 2V9" stroke="currentColor" stroke-width="1.5" />
+</svg>
+</button>
+</div>
+</div>
+</div>
+<div class="vacancy-details-drawer">
+<div class="drawer-inner-grid">
+<div>
+<div class="drawer-col-title">Asosiy Vazifalar</div>
+<ul class="drawer-list">
+<li>Muhandislik jamoalari va buyurtmachi vakillari o'rtasida texnik jarayonlarni muvofiqlashtirish.
+</li>
+<li>Sprintlar rejasi, muddatlar va resurslarni taqsimlash (Scrum/Kanban).</li>
+<li>Xatarlarni (risks) erta aniqlash va ularni bartaraf etish choralarini ko'rish.</li>
+<li>Loyiha spetsifikatsiyalari va texnik hujjatlarning to'liqligini nazorat qilish.</li>
+</ul>
+</div>
+<div>
+<div class="drawer-col-title">Biz Kutayotgan Talablar</div>
+<ul class="drawer-list">
+<li>IT sohasida Technical PM yoki Scrum Master sifatida 3+ yillik tajriba.</li>
+<li>Dasturiy arxitektura, backend, frontend va MB tamoyillarini texnik darajada tushunish.</li>
+<li>Jira, Confluence va Agile metodologiyalarida professional bilim.</li>
+<li>Yuqori muzokara, vaqtni boshqarish va yetakchilik ko'nikmalari.</li>
+</ul>
+</div>
+<div>
+<div class="drawer-col-title">Biz Taklif Qilamiz</div>
+<ul class="drawer-list">
+<li>Masshtabli davlat va korporativ loyihalarni boshqarish tajribasi.</li>
+<li>Raqobatbardosh oylik maosh va loyiha yakunlari bo'yicha bonuslar.</li>
+<li>Zamonaviy ofis va do'stona korporativ muhit.</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+</div>
+<div class="vacancies-empty-state" id="vacanciesEmptyState">
+<div class="empty-state-icon">
+<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+<circle cx="11" cy="11" r="8"></circle>
+<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+<line x1="8" y1="11" x2="14" y2="11"></line>
+</svg>
+</div>
+<h3 class="empty-state-title">Mos vakansiyalar topilmadi</h3>
+<p class="empty-state-desc">
+Kiritilgan so'rov yoki tanlangan kategoriya bo'yicha ayni paytda ochiq o'rin yo'q. Qidiruv so'zini o'zgartirib
+ko'ring yoki umumiy rezyumengizni yuboring.
+</p>
+<button type="button" class="btn-apply-direct" data-apply-role="General Engineering Application">
+<span>Umumiy rezyume yuborish</span>
+</button>
+</div>
+</section>
+<section class="hiring-process-section">
+<div class="wrap">
+<div class="section-head">
+<div>
+<h2 class="section-title" data-reveal>Tanlov jarayoni qanday kechadi?</h2>
+</div>
+<p class="section-note" data-reveal>
+Ortiqcha byurokratiyasiz, muhandislar vaqtini qadrlaydigan 4 bosqichli tezkor jarayon.
+</p>
+</div>
+<div class="process-grid">
+<div class="process-step-card" data-reveal>
+<span class="process-step-num">01.</span>
+<h3 class="process-step-title">Tanishuv Suhbat</h3>
+<p class="process-step-desc">
+15–20 daqiqalik qisqa tanishuv suhbati. Tajribangiz, kutayotgan shart-sharoitlaringiz va kompaniyamiz
+imkoniyatlari haqida erkin muloqot.
+</p>
+</div>
+<div class="process-step-card" data-reveal>
+<span class="process-step-num">02.</span>
+<h3 class="process-step-title">Chuqur Texnik Suhbat</h3>
+<p class="process-step-desc">
+Lead muhandislarimiz bilan chuqur texnik suhbat: real keyslar, arxitektura tahlili va amaliy muhandislik
+yondashuvlari muhokamasi.
+</p>
+</div>
+<div class="process-step-card" data-reveal>
+<span class="process-step-num">03.</span>
+<h3 class="process-step-title">Jamoa va Qadriyatlar Mosligi</h3>
+<p class="process-step-desc">
+Bo'lajak jamoangiz va loyiha rahbarlari bilan tanishuv. Jamoa madaniyati, maqsadlar va qadriyatlar
+mosligini o'rganish.
+</p>
+</div>
+<div class="process-step-card" data-reveal>
+<span class="process-step-num">04.</span>
+<h3 class="process-step-title">Tezkor Ish Taklifi (Offer)</h3>
+<p class="process-step-desc">
+Barcha bosqichlardan so'ng 48 soat ichida aniq, shaffof va barcha shartlari ko'rsatilgan rasmiy ish
+taklifi (Job Offer).
+</p>
+</div>
+</div>
+</div>
+</section>
+<section class="talent-pool-wrap wrap">
+<div class="talent-pool-card" data-reveal>
+<div class="talent-pool-content">
+<span class="talent-pool-badge">// TALENT POOL // OCHIQ ARIZA</span>
+<h2 class="talent-pool-title">O'zingizga mos vakansiya topmadingizmi?</h2>
+<p class="talent-pool-desc">
+TOPDEV doimo o'z sohasining eng yaxshi muhandislariga ochiq. Rezyumengiz, portfolio yoki GitHub
+profilingizni bizga yuboring — biz siz uchun mos pozitsiyani muhokama qilishdan mamnun bo'lamiz.
+</p>
+</div>
+<div class="talent-pool-actions">
+<button type="button" class="btn-talent-email" data-apply-role="General Application (Talent Pool)">
+<span>Rezyume yuborish</span>
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+<path d="M2 10L10 2M10 2H3M10 2V9" stroke="currentColor" stroke-width="1.5" />
+</svg>
+</button>
+<a href="https://t.me/topdevadmin" target="_blank" rel="noopener" class="btn-talent-tg">
+<span>Telegram orqali yozish</span> ↗
+</a>
+</div>
+</div>
+</section>
+</main>
+<div class="apply-modal-overlay" id="applyModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+<div class="apply-modal-card">
+<button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Yopish">&times;</button>
+<div class="modal-header">
+<div class="modal-pretitle">// ARIZA TOPSHIRISH</div>
+<h3 class="modal-title" id="modalTitle">Jamoaga qo'shilish</h3>
+<p class="modal-subtitle">Qisqa ma'lumotlaringizni qoldiring, HR jamoamiz 24 soat ichida bog'lanadi.</p>
+</div>
+<form class="modal-form" id="applyForm">
+<div class="form-group">
+<label for="applyName" class="form-label">Ism va Familiyangiz <span class="required">*</span></label>
+<input type="text" id="applyName" name="name" class="form-input" placeholder="Ali Valiyev" required>
+</div>
+<div class="form-group">
+<label for="applyContact" class="form-label">Telegram username yoki Telefon raqam <span class="required">*</span></label>
+<input type="text" id="applyContact" name="contact" class="form-input" placeholder="@username yoki +998 90 123 45 67" required>
+</div>
+<div class="form-group">
+<label for="applyRole" class="form-label">Tanlangan lavozim <span class="required">*</span></label>
+<select id="applyRole" name="role" class="form-select" required>
+<option value="Senior / Lead Go Engineer">Senior / Lead Go Engineer (High-Load Systems)</option>
+<option value="Senior Python / FastAPI Engineer">Senior Python / FastAPI Engineer</option>
+<option value="Lead DevOps & Cloud Engineer">Lead DevOps &amp; Cloud Infrastructure Engineer</option>
+<option value="Senior Frontend Engineer">Senior Frontend Engineer (React/TS)</option>
+<option value="Senior Mobile Engineer">Senior Mobile Engineer (Flutter/iOS)</option>
+<option value="Senior QA Automation Engineer">Senior QA Automation Engineer</option>
+<option value="Technical Project Manager">Technical Project Manager</option>
+<option value="General Application (Talent Pool)">Boshqa / Umumiy rezyume (Talent Pool)</option>
+</select>
+</div>
+<div class="form-group">
+<label for="applyLinks" class="form-label">Rezyume / LinkedIn / GitHub havolasi <span class="required">*</span></label>
+<input type="url" id="applyLinks" name="link" class="form-input" placeholder="https://linkedin.com/in/... yoki Drive link" required>
+</div>
+<div class="form-group">
+<label for="applyNote" class="form-label">Qo'shimcha izoh yoki qisqa xabar (ixtiyoriy)</label>
+<textarea id="applyNote" name="note" class="form-textarea" rows="3" placeholder="Tajribangiz yoki qiziqishlaringiz haqida qisqacha..."></textarea>
+</div>
+<button type="submit" class="form-submit-btn" id="modalSubmitBtn">
+<span>Arizani yuborish</span>
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+<path d="M2 10L10 2M10 2H3M10 2V9" stroke="currentColor" stroke-width="1.5" />
+</svg>
+</button>
+</form>
+<div class="modal-success-state" id="modalSuccessState">
+<div class="success-icon-wrap">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+</div>
+<h4 class="success-title">Arizangiz qabul qilindi!</h4>
+<p class="success-desc">
+Rahmat! Sizning arizangiz TOPDEV muhandislik HR bo'limiga yetib bordi. Biz rezyumengizni ko'rib chiqib, 24
+soat ichida Telegram yoki telefon orqali siz bilan bog'lanamiz.
+</p>
+<button type="button" class="btn-apply-direct" onclick="document.getElementById('applyModal').classList.remove('is-open'); document.documentElement.style.overflow='';">
+<span>Tushunarli</span>
+</button>
+</div>
+</div>
+</div>
+<footer class="minimal-footer wrap">
+<div class="footer-minimal-card" data-reveal>
+<div class="footer-minimal-middle">
+<div class="footer-min-col">
+<span class="footer-brand-title">TOPDEV<span class="dot">.</span></span>
+<span class="footer-brand-desc">Yuqori Yuklamali Raqamli Muhandislik</span>
+</div>
+<div class="footer-min-col">
+<span class="footer-col-header">TO‘G‘RIDAN-TO‘G‘RI HAVOLALAR</span>
+<div class="footer-links-row">
+<a href="portfolio.html">Portfolio</a>
+<a href="service.html">Xizmatlar</a>
+<a href="index.html#stacks">Texnologiyalar</a>
+<a href="mailto:info@topdev.uz">Bog‘lanish</a>
+</div>
+</div>
+<div class="footer-min-col">
+<span class="footer-col-header">TARMOQLAR</span>
+<div class="footer-links-row">
+<a href="https://t.me/topdevuz" target="_blank" rel="noopener">Telegram ↗</a>
+<a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a>
+<a href="https://github.com" target="_blank" rel="noopener">GitHub ↗</a>
+</div>
+</div>
+<div class="footer-min-col">
+<span class="footer-col-header">BOSH QARORGOH</span>
+<span class="footer-text-muted">Toshkent, O‘zbekiston</span>
+</div>
+</div>
+<div class="footer-minimal-bottom">
+<span>© 2026 TOPDEV MCHJ. BARCHA HUQUQLAR HIMOYALANGAN.</span>
+<span>YUQORI YUKLAMA VA ISHONCHLILIK UCHUN</span>
+</div>
+</div>
+</footer>
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/vacancy.js" defer></script>
+</body>
+</html>

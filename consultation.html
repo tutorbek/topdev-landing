@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="uz" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Texnik Konsultatsiya — TOPDEV</title>
+<meta name="description" content="TOPDEV texnik konsultatsiyasi: High-load arxitektura, korporativ ERP/CRM tahlili, tizim xavfsizligi va kod auditi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/consultation.css">
+</head>
+<body>
+<a href="#top" class="skip-link">Asosiy kontentga o‘tish</a>
+<div class="navbar-wrapper" id="navbarWrapper">
+<nav class="navbar wrap" id="navbar" aria-label="Asosiy navigatsiya">
+<a href="index.html" class="logo-mark">
+TOPDEV
+</a>
+<div class="nav-links">
+<a href="index.html" class="nav-link">Bosh sahifa</a>
+<a href="portfolio.html" class="nav-link">Portfolio</a>
+<a href="service.html" class="nav-link">Xizmatlar</a>
+<a href="about.html" class="nav-link">Biz haqimizda</a>
+<a href="vacancy.html" class="nav-link">Vakansiyalar</a>
+</div>
+<div class="nav-actions">
+<a href="consultation.html" class="cta-btn">
+<span>Bog‘lanish</span>
+<svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+<path d="M2 10L10 2M10 2H3M10 2V9" stroke="currentColor" stroke-width="1.5" />
+</svg>
+</a>
+<button type="button" class="nav-burger" id="burgerBtn" aria-label="Navigatsiya menyusini ochish" aria-expanded="false" aria-controls="mobileMenu">
+<span></span><span></span><span></span>
+</button>
+</div>
+</nav>
+</div>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Sayt navigatsiyasi" aria-hidden="true">
+<button type="button" class="mobile-close" id="mobileClose" aria-label="Menyuni yopish"></button>
+<a href="index.html">Bosh sahifa</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="service.html">Xizmatlar</a>
+<a href="about.html">Biz haqimizda</a>
+<a href="vacancy.html">Vakansiyalar</a>
+<a href="consultation.html" style="color: var(--accent);">Bog‘lanish</a>
+</div>
+<main id="top" tabindex="-1">
+<section class="consult-page-wrap">
+<div class="wrap consult-container">
+<div class="consult-header">
+<h1 class="consult-title">Texnik Konsultatsiya Olish</h1>
+<p class="consult-subtitle">
+Loyihangiz arxitekturasi, texnologik steki yoki muammolarini Lead muhandis bilan 1-on-1 tahlil qiling.
+</p>
+</div>
+<div class="consult-card">
+<form class="consult-form" id="consultationForm">
+<div class="form-group">
+<label class="form-label">
+<span>Yo‘nalishni tanlang</span>
+<span class="hint">Mos sohani belgilang</span>
+</label>
+<div class="pills-grid" role="group" aria-label="Konsultatsiya yo‘nalishi">
+<button type="button" class="pill-choice active" data-value="High-Load & Backend" aria-pressed="true">
+High-Load &amp; Backend
+</button>
+<button type="button" class="pill-choice" data-value="ERP & CRM Tizimlari" aria-pressed="false">
+ERP &amp; CRM Tizimlari
+</button>
+<button type="button" class="pill-choice" data-value="Mobil & Web Ilovalar" aria-pressed="false">
+Mobil &amp; Web Ilovalar
+</button>
+<button type="button" class="pill-choice" data-value="Tizim & Kod Auditi" aria-pressed="false">
+Tizim &amp; Kod Auditi
+</button>
+<button type="button" class="pill-choice" data-value="DevOps & Bulut" aria-pressed="false">
+DevOps &amp; Bulut
+</button>
+<button type="button" class="pill-choice" data-value="Startap / MVP" aria-pressed="false">
+Startap / MVP
+</button>
+</div>
+<input type="hidden" id="consultTopic" name="topic" value="High-Load & Backend">
+</div>
+<div class="form-group">
+<label class="form-label">
+<span>Uchrashuv formati</span>
+</label>
+<div class="format-segmented" role="group" aria-label="Uchrashuv formati">
+<button type="button" class="format-btn active" data-value="Online (Google Meet)" aria-pressed="true">
+Online (Google Meet)
+</button>
+<button type="button" class="format-btn" data-value="Shaxsan (Toshkent ofisi)" aria-pressed="false">
+Shaxsan (Toshkent ofisi)
+</button>
+<button type="button" class="format-btn" data-value="Telefon orqali" aria-pressed="false">
+Telefon orqali
+</button>
+</div>
+<input type="hidden" id="consultFormat" name="format" value="Online (Google Meet)">
+</div>
+<div class="inputs-row">
+<div class="input-field-wrap">
+<label for="consultName" class="form-label">
+<span>Ismingiz <span class="req">*</span></span>
+</label>
+<input type="text" id="consultName" name="name" class="form-input" placeholder="Ism-sharifingiz" autocomplete="name" required>
+</div>
+<div class="input-field-wrap">
+<label for="consultContact" class="form-label">
+<span>Telefon yoki Telegram <span class="req">*</span></span>
+</label>
+<input type="text" id="consultContact" name="contact" class="form-input" placeholder="+998 90 123 45 67 yoki @username" autocomplete="tel" required>
+</div>
+<div class="input-field-wrap full-width">
+<label for="consultNotes" class="form-label">
+<span>Loyiha yoki savolingiz haqida qisqacha</span>
+<span class="hint">Ixtiyoriy</span>
+</label>
+<textarea id="consultNotes" name="notes" class="form-textarea" rows="3" placeholder="Tizim maqsadi, kutilayotgan yuklama yoki asosiy texnik savolingiz..."></textarea>
+</div>
+</div>
+<div class="submit-wrap">
+<button type="submit" class="submit-btn" id="consultSubmitBtn">
+Konsultatsiyani band qilish
+</button>
+<div class="trust-strip">
+<span class="trust-item">Bepul 45 daqiqa</span>
+<span class="trust-item">100% NDA maxfiylik</span>
+<span class="trust-item">2 soat ichida javob</span>
+</div>
+</div>
+</form>
+<div class="success-state-card" id="consultSuccessCard">
+<div class="success-badge">Muvaffaqiyatli</div>
+<h2 class="success-title">So‘rovingiz Qabul Qilindi</h2>
+<p class="success-desc" id="successSummary">
+Lead Solution Architect 2 soat ichida siz bilan bog‘lanib, qulay vaqtni tasdiqlaydi.
+</p>
+<div class="success-actions">
+<a href="https://t.me/topdevadmin" target="_blank" rel="noopener" class="cta-btn">
+<span>Telegram orqali tezkor yozish ↗</span>
+</a>
+<button type="button" class="btn-secondary" id="resetFormBtn">
+Yana so‘rov yuborish
+</button>
+</div>
+</div>
+</div>
+<div class="quick-direct-box">
+<div class="quick-direct-text">
+Shoshilinch holatmi yoki tezkor savol bormi?
+</div>
+<a href="https://t.me/topdevadmin" target="_blank" rel="noopener" class="quick-direct-link">
+Telegram orqali yozing: @topdevuz ↗
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="minimal-footer wrap">
+<div class="footer-minimal-card" data-reveal>
+<div class="footer-minimal-middle">
+<div class="footer-min-col">
+<span class="footer-brand-title">TOPDEV<span class="dot">.</span></span>
+<span class="footer-brand-desc">Yuqori Yuklamali Raqamli Muhandislik</span>
+</div>
+<div class="footer-min-col">
+<span class="footer-col-header">TO‘G‘RIDAN-TO‘G‘RI HAVOLALAR</span>
+<div class="footer-links-row">
+<a href="portfolio.html">Portfolio</a>
+<a href="service.html">Xizmatlar</a>
+<a href="index.html#stacks">Texnologiyalar</a>
+<a href="mailto:info@topdev.uz">Bog‘lanish</a>
+</div>
+</div>
+<div class="footer-min-col">
+<span class="footer-col-header">TARMOQLAR</span>
+<div class="footer-links-row">
+<a href="https://t.me/topdevuz" target="_blank" rel="noopener">Telegram ↗</a>
+<a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a>
+<a href="https://github.com" target="_blank" rel="noopener">GitHub ↗</a>
+</div>
+</div>
+<div class="footer-min-col">
+<span class="footer-col-header">BOSH QARORGOH</span>
+<span class="footer-text-muted">Tashkent, O‘zbekiston</span>
+</div>
+</div>
+<div class="footer-minimal-bottom">
+<span>© 2026 TOPDEV MCHJ. BARCHA HUQUQLAR HIMOYALANGAN.</span>
+<span>YUQORI YUKLAMA VA ISHONCHLILIK UCHUN</span>
+</div>
+</div>
+</footer>
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/consultation.js" defer></script>
+</body>
+</html>

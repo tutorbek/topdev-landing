@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="uz" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Xizmatlar va Yechimlar — TOPDEV Yuqori Yuklamali IT Muhandislik</title>
+  <meta name="description" content="TOPDEV xizmatlari: Korporativ ERP/CRM tizimlari, High-Load backend va mikroservislar, Web va bulut platformalari, iOS/Android mobil ilovalar, UI/UX dizayn va DevOps xavfsizlik.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/service.css">
+</head>
+<body>
+  <a href="#top" class="skip-link">Asosiy kontentga o‘tish</a>
+
+  <!-- TOP NAVIGATION -->
+  <div class="navbar-wrapper" id="navbarWrapper">
+    <nav class="navbar wrap" id="navbar" aria-label="Asosiy navigatsiya">
+      <a href="index.html" class="logo-mark">
+        TOPDEV
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Bosh sahifa</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="service.html" class="nav-link active">Xizmatlar</a>
+        <a href="about.html" class="nav-link">Biz haqimizda</a>
+        <a href="vacancy.html" class="nav-link">Vakansiyalar</a>
+      </div>
+      <div class="nav-actions">
+        <a href="consultation.html" class="cta-btn">
+          <span>Bog‘lanish</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M2 10L10 2M10 2H3M10 2V9" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </a>
+        <button type="button" class="nav-burger" id="burgerBtn" aria-label="Navigatsiya menyusini ochish" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Sayt navigatsiyasi" aria-hidden="true">
+    <button type="button" class="mobile-close" id="mobileClose" aria-label="Menyuni yopish"></button>
+    <a href="index.html">Bosh sahifa</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="service.html">Xizmatlar</a>
+    <a href="about.html">Biz haqimizda</a>
+    <a href="vacancy.html">Vakansiyalar</a>
+    <a href="consultation.html" style="color: var(--accent);">Bog‘lanish</a>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="service-consulting-hero wrap" id="top">
+      <div class="consulting-hero-grid">
+        <div class="consulting-hero-left">
+          <div class="hero-pill-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            ARXITEKTURA VA YUQORI YUKLAMALI MUHANDISLIK
+          </div>
+          <h1 class="consulting-hero-title">
+            Murakkab Biznes Tizimlari Uchun Yuqori Muhandislik
+          </h1>
+          <p class="consulting-hero-desc">
+            Biz shunchaki kod yozmaymiz — korxonalarning oylik millionlab tranzaksiyalarini, xavfsiz ma’lumotlar bazalarini va 99.99% uzluksiz ishlovchi ekotizimlarini quramiz.
+          </p>
+          <div class="consulting-hero-actions">
+            <a href="#servicesCatalog" class="consulting-primary-btn">
+              <span>Xizmatlar katalogi</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M7 17l9.2-9.2M17 17V7H7"/>
+              </svg>
+            </a>
+            <a href="#estimator" class="consulting-secondary-btn">
+              <span>Loyihani hisoblash</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="consulting-metrics-strip">
+          <div class="consulting-metric-item">
+            <span class="c-metric-num">99.99%</span>
+            <span class="c-metric-label">SLA Kafolatlangan Uzluksiz Ishlash</span>
+          </div>
+          <div class="consulting-metric-item">
+            <span class="c-metric-num">120k+</span>
+            <span class="c-metric-label">Maksimal RPS Barqaror Yuklama</span>
+          </div>
+          <div class="consulting-metric-item">
+            <span class="c-metric-num">14 kun</span>
+            <span class="c-metric-label">Birinchi Ishchi MVP & Audit Natijasi</span>
+          </div>
+          <div class="consulting-metric-item">
+            <span class="c-metric-num">40+</span>
+            <span class="c-metric-label">Muvaffaqiyatli Enterprise Tizimlar</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES CATALOG -->
+    <section class="services-main-section wrap" id="servicesCatalog">
+      <!-- Filter Bar -->
+      <div class="service-filter-bar" role="tablist" aria-label="Xizmatlar toifasi">
+        <button type="button" class="service-filter-btn active" data-filter="all">
+          <span>Barcha Xizmatlar</span>
+          <span class="filter-count" id="filterCountAll">7</span>
+        </button>
+        <button type="button" class="service-filter-btn" data-filter="enterprise">
+          <span>Enterprise ERP/CRM</span>
+          <span class="filter-count">1</span>
+        </button>
+        <button type="button" class="service-filter-btn" data-filter="highload">
+          <span>High-Load Backend</span>
+          <span class="filter-count">1</span>
+        </button>
+        <button type="button" class="service-filter-btn" data-filter="web">
+          <span>Web & SaaS</span>
+          <span class="filter-count">1</span>
+        </button>
+        <button type="button" class="service-filter-btn" data-filter="mobile">
+          <span>Mobil Ilovalar</span>
+          <span class="filter-count">1</span>
+        </button>
+        <button type="button" class="service-filter-btn" data-filter="design">
+          <span>UI/UX Dizayn</span>
+          <span class="filter-count">1</span>
+        </button>
+        <button type="button" class="service-filter-btn" data-filter="devops">
+          <span>DevOps & Cloud</span>
+          <span class="filter-count">1</span>
+        </button>
+        <button type="button" class="service-filter-btn" data-filter="consulting">
+          <span>IT Konsalting</span>
+          <span class="filter-count">1</span>
+        </button>
+      </div>
+
+      <!-- Services Showcase List -->
+      <div class="services-modular-list" id="servicesList">
+        <!-- CARD 1: ENTERPRISE -->
+        <article class="service-modular-card theme-dark" data-category="enterprise">
+          <span class="card-watermark-num">01</span>
+          <div class="card-content-grid">
+            <div class="card-left-panel">
+              <div class="card-header-top">
+                <span class="card-spec-badge">ENTERPRISE SYSTEM</span>
+              </div>
+              <h2 class="card-service-title">Korporativ ERP, CRM va Avtomatlashtirish</h2>
+              <p class="card-service-desc">
+                Bozordagi tayyor shablonlarga sig‘maydigan murakkab ishlab chiqarish, logistika, moliya va ombor jarayonlarini yagona avtomatlashtirilgan raqamli markazga birlashtiramiz.
+              </p>
+              <div class="card-metrics-row">
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">500+</span>
+                  <span class="mini-metric-lbl">Bir vaqtda faol xodim</span>
+                </div>
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">1C / Bank</span>
+                  <span class="mini-metric-lbl">To‘liq integratsiya</span>
+                </div>
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">99.98%</span>
+                  <span class="mini-metric-lbl">Ishonchlilik kafolati</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-right-panel">
+              <ul class="card-features-list">
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>Moslashtirilgan modullar:</b> Ombor, kadrlar (HRM), buxgalteriya va savdo voronkasi.</span>
+                </li>
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>RBAC Xavfsizlik:</b> Rollar va ruxsatnomalar bo‘yicha ko‘p bosqichli ma’lumotlar himoyasi.</span>
+                </li>
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>Real-vaqt Tahlili:</b> Rahbariyat uchun jonli moliyaviy BI-dashboardlar.</span>
+                </li>
+              </ul>
+              <div class="card-tech-strip">
+                <span class="card-tech-pill">Go</span>
+                <span class="card-tech-pill">PostgreSQL</span>
+                <span class="card-tech-pill">Redis</span>
+                <span class="card-tech-pill">React</span>
+                <span class="card-tech-pill">Docker</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-bottom-actions">
+            <button type="button" class="btn-open-spec" data-spec-trigger="enterprise">
+              <span>Batafsil texnik arxitektura va SLA</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="#contactSection" class="btn-card-order" data-service-select="Enterprise ERP / CRM Tizimi">
+              <span>Loyiha buyurtma qilish</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 2: HIGHLOAD BACKEND -->
+        <article class="service-modular-card theme-blue" data-category="highload">
+          <span class="card-watermark-num">02</span>
+          <div class="card-content-grid">
+            <div class="card-left-panel">
+              <div class="card-header-top">
+                <span class="card-spec-badge">CORE INFRASTRUCTURE</span>
+              </div>
+              <h2 class="card-service-title">High-Load Backend va Mikroservislar</h2>
+              <p class="card-service-desc">
+                Pik yuklamalarida (Black Friday, to‘lovlar, ommaviy translyatsiyalar) qotmaydigan, gorizontal kengayuvchi va mikroservisli taqsimlangan backend arxitekturasi.
+              </p>
+              <div class="card-metrics-row">
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">120k+</span>
+                  <span class="mini-metric-lbl">Barqaror RPS yuklama</span>
+                </div>
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">&lt; 35ms</span>
+                  <span class="mini-metric-lbl">P99 Server javob tezligi</span>
+                </div>
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">99.99%</span>
+                  <span class="mini-metric-lbl">Uptime SLA kafolati</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-right-panel">
+              <ul class="card-features-list">
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>Asinxron navbatlar:</b> Kafka va RabbitMQ orqali tranzaksiyalarni yo‘qotmasdan qayta ishlash.</span>
+                </li>
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>Sharding & Replikatsiya:</b> Katta hajmli ma’lumotlar bazalarini taqsimlash.</span>
+                </li>
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>gRPC & Protobuf:</b> Ichki mikroservislar o‘rtasida millisekundlik tejamkor aloqa.</span>
+                </li>
+              </ul>
+              <div class="card-tech-strip">
+                <span class="card-tech-pill">Go</span>
+                <span class="card-tech-pill">Node.js</span>
+                <span class="card-tech-pill">Kafka</span>
+                <span class="card-tech-pill">PostgreSQL Sharding</span>
+                <span class="card-tech-pill">Redis Cluster</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-bottom-actions">
+            <button type="button" class="btn-open-spec" data-spec-trigger="highload">
+              <span>Batafsil texnik arxitektura va SLA</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="#contactSection" class="btn-card-order" data-service-select="High-Load Backend va Mikroservislar">
+              <span>Loyiha buyurtma qilish</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 3: WEB & SAAS -->
+        <article class="service-modular-card theme-white" data-category="web">
+          <span class="card-watermark-num">03</span>
+          <div class="card-content-grid">
+            <div class="card-left-panel">
+              <div class="card-header-top">
+                <span class="card-spec-badge">DIGITAL PLATFORMS</span>
+              </div>
+              <h2 class="card-service-title">Zamonaviy Web va SaaS Platformalari</h2>
+              <p class="card-service-desc">
+                Global bozorga mo‘ljallangan obuna tizimli (subscription) SaaS mahsulotlar, B2B korporativ portallar va tezkor elektron tijorat platformalari.
+              </p>
+              <div class="card-metrics-row">
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">95+</span>
+                  <span class="mini-metric-lbl">Google PageSpeed</span>
+                </div>
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">&lt; 1.2s</span>
+                  <span class="mini-metric-lbl">First Contentful Paint</span>
+                </div>
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">100%</span>
+                  <span class="mini-metric-lbl">Responsive & PWA</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-right-panel">
+              <ul class="card-features-list">
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>Server-Side Rendering (SSR):</b> Qidiruv tizimlari (SEO) uchun maksimal optimizatsiya.</span>
+                </li>
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>Multi-tenant Arxitektura:</b> Har bir korporativ mijoz uchun izolyatsiyalangan xavfsiz muhit.</span>
+                </li>
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>Avtomatlashtirilgan Billing:</b> Click, Payme, Uzum va xalqaro Stripe to‘lov tizimlari.</span>
+                </li>
+              </ul>
+              <div class="card-tech-strip">
+                <span class="card-tech-pill">Next.js</span>
+                <span class="card-tech-pill">TypeScript</span>
+                <span class="card-tech-pill">Tailwind CSS</span>
+                <span class="card-tech-pill">Node.js</span>
+                <span class="card-tech-pill">GraphQL</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-bottom-actions">
+            <button type="button" class="btn-open-spec" data-spec-trigger="web">
+              <span>Batafsil texnik arxitektura va SLA</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="#contactSection" class="btn-card-order" data-service-select="Web & SaaS Platformasi">
+              <span>Loyiha buyurtma qilish</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 4: MOBILE APPS -->
+        <article class="service-modular-card theme-slate" data-category="mobile">
+          <span class="card-watermark-num">04</span>
+          <div class="card-content-grid">
+            <div class="card-left-panel">
+              <div class="card-header-top">
+                <span class="card-spec-badge">MOBILE ECOSYSTEM</span>
+              </div>
+              <h2 class="card-service-title">iOS va Android Mobil Ilovalari</h2>
+              <p class="card-service-desc">
+                Foydalanuvchini o‘ziga tortuvchi qulay UX, 60fps tezlikdagi animatsiyalar, oflayn rejim va to‘liq xavfsiz mobil ekotizimlar yaratish.
+              </p>
+              <div class="card-metrics-row">
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">60 fps</span>
+                  <span class="mini-metric-lbl">To‘liq silliq animatsiya</span>
+                </div>
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">99.8%</span>
+                  <span class="mini-metric-lbl">Crash-free session</span>
+                </div>
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">iOS & Android</span>
+                  <span class="mini-metric-lbl">Yagona standart</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-right-panel">
+              <ul class="card-features-list">
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>Biometrik himoya:</b> FaceID va barmoq izi orqali xavfsiz autentifikatsiya.</span>
+                </li>
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>Oflayn Sinxronizatsiya:</b> Internetsiz ishlash va qayta ulanganda ma’lumotlarni sinxronlash.</span>
+                </li>
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>Geolokatsiya & Push:</b> Real-vaqt tracking va maqsadli bildirishnomalar tizimi.</span>
+                </li>
+              </ul>
+              <div class="card-tech-strip">
+                <span class="card-tech-pill">Flutter</span>
+                <span class="card-tech-pill">React Native</span>
+                <span class="card-tech-pill">Swift</span>
+                <span class="card-tech-pill">Kotlin</span>
+                <span class="card-tech-pill">Firebase</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-bottom-actions">
+            <button type="button" class="btn-open-spec" data-spec-trigger="mobile">
+              <span>Batafsil texnik arxitektura va SLA</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="#contactSection" class="btn-card-order" data-service-select="iOS & Android Mobil Ilova">
+              <span>Loyiha buyurtma qilish</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 5: UI/UX DESIGN -->
+        <article class="service-modular-card theme-white" data-category="design">
+          <span class="card-watermark-num">05</span>
+          <div class="card-content-grid">
+            <div class="card-left-panel">
+              <div class="card-header-top">
+                <span class="card-spec-badge">PRODUCT EXPERIENCE</span>
+              </div>
+              <h2 class="card-service-title">UI/UX Muhandislik va Dizayn Tizimlari</h2>
+              <p class="card-service-desc">
+                Chiroyli grafikadan tashqari foydalanuvchi psixologiyasi, konversiya voronkasi va kengayuvchi Design System asosida biznes muammolarini yechamiz.
+              </p>
+              <div class="card-metrics-row">
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">+35%</span>
+                  <span class="mini-metric-lbl">O‘rtacha konversiya o‘sishi</span>
+                </div>
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">WCAG 2.1</span>
+                  <span class="mini-metric-lbl">AA Standart qulaylik</span>
+                </div>
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">100%</span>
+                  <span class="mini-metric-lbl">Design Tokens tizimi</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-right-panel">
+              <ul class="card-features-list">
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>Foydalanuvchi Tadqiqoti (CJM):</b> Mijoz yo‘lini tahlil qilib, to‘siqlarni bartaraf etish.</span>
+                </li>
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>Interaktiv Prototip:</b> Ishlab chiqish boshlanishidan oldin Figma orqali jonli test sinovlari.</span>
+                </li>
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>Design Tokens:</b> Dasturchilar uchun avtomatlashtirilgan dizayn komponentlari kutubxonasi.</span>
+                </li>
+              </ul>
+              <div class="card-tech-strip">
+                <span class="card-tech-pill">Figma Pro</span>
+                <span class="card-tech-pill">Design Tokens</span>
+                <span class="card-tech-pill">Protopie</span>
+                <span class="card-tech-pill">UX Audit</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-bottom-actions">
+            <button type="button" class="btn-open-spec" data-spec-trigger="design">
+              <span>Batafsil texnik arxitektura va SLA</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="#contactSection" class="btn-card-order" data-service-select="UI/UX Dizayn va Tizim">
+              <span>Loyiha buyurtma qilish</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 6: DEVOPS & CLOUD -->
+        <article class="service-modular-card theme-dark" data-category="devops">
+          <span class="card-watermark-num">06</span>
+          <div class="card-content-grid">
+            <div class="card-left-panel">
+              <div class="card-header-top">
+                <span class="card-spec-badge">CLOUD & INFRA</span>
+              </div>
+              <h2 class="card-service-title">DevOps, Cloud & CI/CD Infratuzilma</h2>
+              <p class="card-service-desc">
+                Klasterli serverlar xavfsizligi, avtomatlashtirilgan relizlar, zero-downtime deploy va 24/7 monitoring tizimini noldan sozlaymiz.
+              </p>
+              <div class="card-metrics-row">
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">0 sec</span>
+                  <span class="mini-metric-lbl">Deploy vaqtida to‘xtalish</span>
+                </div>
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">100%</span>
+                  <span class="mini-metric-lbl">Avtomatlashtirilgan CI/CD</span>
+                </div>
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">24/7</span>
+                  <span class="mini-metric-lbl">Grafana/Prometheus Alert</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-right-panel">
+              <ul class="card-features-list">
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>Kubernetes Klaster:</b> Konteynerlar avto-masshtablanishi (auto-scaling) va yuklama taqsimlash.</span>
+                </li>
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>Infrastructure as Code:</b> Terraform va Ansible orqali serverlarni bir zumda qayta tiklash.</span>
+                </li>
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>DDoS & WAF Himoyasi:</b> Cloudflare Enterprise va xavfsiz tarmoq konfiguratsiyasi.</span>
+                </li>
+              </ul>
+              <div class="card-tech-strip">
+                <span class="card-tech-pill">Kubernetes</span>
+                <span class="card-tech-pill">Docker</span>
+                <span class="card-tech-pill">Terraform</span>
+                <span class="card-tech-pill">GitLab CI</span>
+                <span class="card-tech-pill">Prometheus</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-bottom-actions">
+            <button type="button" class="btn-open-spec" data-spec-trigger="devops">
+              <span>Batafsil texnik arxitektura va SLA</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="#contactSection" class="btn-card-order" data-service-select="DevOps va Cloud Infratuzilma">
+              <span>Loyiha buyurtma qilish</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 7: IT CONSULTING -->
+        <article class="service-modular-card theme-slate" data-category="consulting">
+          <span class="card-watermark-num">07</span>
+          <div class="card-content-grid">
+            <div class="card-left-panel">
+              <div class="card-header-top">
+                <span class="card-spec-badge">STRATEGY & AUDIT</span>
+              </div>
+              <h2 class="card-service-title">IT Audit, Xavfsizlik va Konsalting</h2>
+              <p class="card-service-desc">
+                Mavjud dasturiy ta’minotning zaifliklarini aniqlash, kod sifati tahlili, ma’lumotlar bazasi indeksatsiyasi va jamoa mahsuldorligini oshirish.
+              </p>
+              <div class="card-metrics-row">
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">3 kun</span>
+                  <span class="mini-metric-lbl">To‘liq xavfsizlik auditi</span>
+                </div>
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">40+ band</span>
+                  <span class="mini-metric-lbl">Amaliy optimizatsiya rejasi</span>
+                </div>
+                <div class="card-mini-metric">
+                  <span class="mini-metric-num">-40%</span>
+                  <span class="mini-metric-lbl">Server xarajatlarini tejash</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-right-panel">
+              <ul class="card-features-list">
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>Penetration Testing:</b> Xakerlik hujumlariga qarshi tizim zaifliklarini tekshirish.</span>
+                </li>
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>SQL So‘rovlar Tahlili:</b> Qotib qolayotgan og‘ir so‘rovlarni 10x gacha tezlashtirish.</span>
+                </li>
+                <li class="card-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span><b>Arxitektura Eskizi:</b> Yangi loyihalar uchun texnik topshiriq (SRS) va stek tanlash.</span>
+                </li>
+              </ul>
+              <div class="card-tech-strip">
+                <span class="card-tech-pill">Code Review</span>
+                <span class="card-tech-pill">OWASP Top 10</span>
+                <span class="card-tech-pill">SQL Tuning</span>
+                <span class="card-tech-pill">Cloud FinOps</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-bottom-actions">
+            <button type="button" class="btn-open-spec" data-spec-trigger="consulting">
+              <span>Batafsil texnik arxitektura va SLA</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="#contactSection" class="btn-card-order" data-service-select="IT Audit va Konsalting">
+              <span>Loyiha buyurtma qilish</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5-STEP ENGINEERING PROCESS PIPELINE -->
+    <section class="process-section wrap">
+      <div class="section-header">
+        <span class="section-tag">MUHANDISLIK JARAYONI</span>
+        <h2 class="section-title">Noldan To To‘liq Ishga Tushirishgacha 5 Bosqich</h2>
+        <p class="section-desc">Biz har bir loyihani qat’iy muhandislik standartlari va shaffof natijalar bilan yetkazib beramiz.</p>
+      </div>
+
+      <div class="process-pipeline-grid">
+        <!-- Step 1 -->
+        <div class="process-pipeline-card">
+          <div>
+            <span class="pipeline-step-num">01</span>
+            <h3 class="pipeline-step-title">Audit va Texnik Topshiriq</h3>
+            <p class="pipeline-step-desc">Biznes talablarini chuqur o‘rganish, yuklama kutilmalari va ma’lumotlar bazasi arxitekturasini loyihalash.</p>
+          </div>
+          <div class="pipeline-deliverable">
+            <span>Natija:</span> Texnik topshiriq (SRS) & Arxitektura xaritasi
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-pipeline-card">
+          <div>
+            <span class="pipeline-step-num">02</span>
+            <h3 class="pipeline-step-title">Prototip va UX Tizimi</h3>
+            <p class="pipeline-step-desc">Foydalanuvchi yo‘li (CJM), to‘liq ekranlar maketi, dizayn tizimi va bosiladigan interaktiv prototip.</p>
+          </div>
+          <div class="pipeline-deliverable">
+            <span>Natija:</span> Interaktiv Figma prototipi & Design Tokens
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-pipeline-card">
+          <div>
+            <span class="pipeline-step-num">03</span>
+            <h3 class="pipeline-step-title">Iterativ Ishlab Chiqish</h3>
+            <p class="pipeline-step-desc">2 haftalik Scrum sprintlari. Har bir bosqichda mijoz ko‘rishi mumkin bo‘lgan ishchi modullar yetkaziladi.</p>
+          </div>
+          <div class="pipeline-deliverable">
+            <span>Natija:</span> Ishchi kod, API hujjatlari va oraliq demo
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-pipeline-card">
+          <div>
+            <span class="pipeline-step-num">04</span>
+            <h3 class="pipeline-step-title">QA va Yuklama Testlari</h3>
+            <p class="pipeline-step-desc">Avtomatlashtirilgan testlar, k6 orqali stress testlar, xavfsizlik (pentest) va kross-brauzer tekshiruvi.</p>
+          </div>
+          <div class="pipeline-deliverable">
+            <span>Natija:</span> QA hisoboti & Stress-test protokoli
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="process-pipeline-card">
+          <div>
+            <span class="pipeline-step-num">05</span>
+            <h3 class="pipeline-step-title">Deploy va 24/7 SLA</h3>
+            <p class="pipeline-step-desc">Zero-downtime deploy, server monitoringi, zaxira nusxalar va shartnoma bo‘yicha kafolatlangan qo‘llab-quvvatlash.</p>
+          </div>
+          <div class="pipeline-deliverable">
+            <span>Natija:</span> Production reliz & 24/7 SLA monitoring
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE ARCHITECTURE ESTIMATOR -->
+    <section class="estimator-section wrap" id="estimator">
+      <div class="section-header">
+        <span class="section-tag">INTERAKTIV KONFIGURATOR</span>
+        <h2 class="section-title">Loyiha Arxitekturasi va Muddatini Hisoblang</h2>
+        <p class="section-desc">Biznes ehtiyojlaringizni tanlang — tizimimiz siz uchun tavsiya etilgan texnologik stek va taxminiy ishlab chiqish muddatini shakllantiradi.</p>
+      </div>
+
+      <div class="estimator-grid">
+        <div class="estimator-controls">
+          <!-- Step 1: Type -->
+          <div class="estimator-group">
+            <span class="estimator-group-title">1. Loyiha Turi:</span>
+            <div class="estimator-option-grid">
+              <button type="button" class="estimator-btn active" data-group="type" data-val="enterprise">Enterprise ERP/CRM</button>
+              <button type="button" class="estimator-btn" data-group="type" data-val="highload">High-Load Backend</button>
+              <button type="button" class="estimator-btn" data-group="type" data-val="web">Web & SaaS</button>
+              <button type="button" class="estimator-btn" data-group="type" data-val="mobile">Mobil Ilova</button>
+              <button type="button" class="estimator-btn" data-group="type" data-val="design">UI/UX Dizayn</button>
+              <button type="button" class="estimator-btn" data-group="type" data-val="devops">DevOps & Cloud</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Scale -->
+          <div class="estimator-group">
+            <span class="estimator-group-title">2. Kutilayotgan Foydalanuvchilar / Yuklama:</span>
+            <div class="estimator-option-grid">
+              <button type="button" class="estimator-btn active" data-group="scale" data-val="starter">1k - 10k / oy (Boshlang‘ich)</button>
+              <button type="button" class="estimator-btn" data-group="scale" data-val="growth">10k - 100k / oy (O‘rtacha)</button>
+              <button type="button" class="estimator-btn" data-group="scale" data-val="enterprise">100k+ / oy (Katta Enterprise)</button>
+            </div>
+          </div>
+
+          <!-- Step 3: Urgency -->
+          <div class="estimator-group">
+            <span class="estimator-group-title">3. Ishga Tushirish Muddati / Rejim:</span>
+            <div class="estimator-option-grid">
+              <button type="button" class="estimator-btn active" data-group="speed" data-val="standard">Standart (Sprintlar bo‘yicha)</button>
+              <button type="button" class="estimator-btn" data-group="speed" data-val="fast">Tezkor MVP (Kengaytirilgan jamoa)</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="estimator-output">
+          <span class="output-label">TAVSIYA ETILGAN YECHIM</span>
+          <div class="output-proj-name" id="estProjName">Enterprise ERP & Boshqaruv Tizimi</div>
+          
+          <div class="output-stats-row">
+            <div class="output-stat-box">
+              <span class="output-stat-lbl">Taxminiy Muddat</span>
+              <span class="output-stat-val" id="estDuration">8 - 14 hafta</span>
+            </div>
+            <div class="output-stat-box">
+              <span class="output-stat-lbl">Kafolatlangan SLA</span>
+              <span class="output-stat-val" id="estSla">99.98% Uptime</span>
+            </div>
+          </div>
+
+          <div class="output-stack-box">
+            <span class="output-stat-lbl">Tavsiya etilgan texnologiyalar steki:</span>
+            <div class="output-stack-val" id="estStack">Go (Golang), PostgreSQL, Redis, React, Docker, GitLab CI</div>
+          </div>
+
+          <button type="button" class="estimator-apply-btn" id="estApplyBtn">
+            <span>Ushbu Spetsifikatsiyani Buyurtmaga Qo‘shish</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section wrap">
+      <div class="section-header">
+        <span class="section-tag">KO‘P SO‘RALADIGAN SAVOLLAR</span>
+        <h2 class="section-title">Hamkorlik Bo‘yicha Muhim Savollar</h2>
+        <p class="section-desc">Biz bilan ishlash jarayoni, kafolatlar va shartnoma shartlari haqida batafsil ma’lumotlar.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button type="button" class="faq-trigger">
+            <span>Loyiha narxi va muddati qanday shakllantiriladi?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              Loyiha narxi va muddati talab qilinadigan modullar soni, kutilayotgan yuklama (RPS) va integratsiyalarga qarab hisoblanadi. Dastlabki 2-3 kun ichida bepul texnik konsultatsiya o‘tkazib, aniq smeta va bosqichma-bosqich reja (Roadmap) taqdim etamiz.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-trigger">
+            <span>Dasturiy ta’minotning manba kodi (source code) kimda qoladi?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              To‘liq manba kodi, arxitektura hujjatlari va intellektual mulk huquqlari 100% buyurtmachiga tegishli bo‘ladi. Loyiha yakunida barcha Git omborlari, server kalitlari va ma’lumotlar bazasi sizning infratuzilmangizga topshiriladi.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-trigger">
+            <span>Loyiha topshirilgandan so‘ng texnik qo‘llab-quvvatlash bormi?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              Ha, biz har bir loyihaga kamida 3 oylik bepul kafolatli texnik qo‘llab-quvvatlash beramiz. Shuningdek, 24/7 rejimida SLA bo‘yicha serverlarni kuzatish va xatoliklarni 15 daqiqa ichida bartaraf etish xizmati mavjud.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-trigger">
+            <span>Bizda mavjud tizim (1C, eski baza) bilan integratsiya qilsa bo‘ladimi?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              Albatta. Biz 1C, bank to‘lov shlyuzlari (Click, Payme, Uzum, Anorbank), CRM tizimlari va tashqi API xizmatlari bilan xavfsiz REST/gRPC shlyuzlar orqali uzluksiz ma’lumot almashinuvini sozlab beramiz.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-trigger">
+            <span>To‘lov tartibi qanday amalga oshiriladi?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-content">
+            <div class="faq-content-inner">
+              To‘lovlar rasmiy shartnoma asosida, bosqichma-bosqich (Milestone asosida) qabul qilinadi. Har bir bosqich natijasi topshirilib, mijoz tomonidan qabul qilish-topshirish dalolatnomasi imzolangandan so‘ng navbatdagi qismga o‘tiladi.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / RFP SECTION -->
+    <section class="contact-section wrap" id="contactSection">
+      <div class="section-header">
+        <span class="section-tag">BOG‘LANISH VA BUYURTMA</span>
+        <h2 class="section-title">Loyihangizni Biz Bilan Muhokama Qiling</h2>
+        <p class="section-desc">Biznesingiz uchun eng optimal arxitektura va bepul texnik konsultatsiya olish uchun formani to‘ldiring.</p>
+      </div>
+
+      <div class="contact-modular-grid">
+        <!-- Form Column -->
+        <div class="contact-card">
+          <form class="contact-form" id="serviceOrderForm" onsubmit="return false;">
+            <div class="contact-form-row">
+              <div class="contact-input-group">
+                <label for="contactName">Ismingiz yoki Kompaniya *</label>
+                <input type="text" id="contactName" class="contact-input" placeholder="Aziz Rahimov" required>
+              </div>
+              <div class="contact-input-group">
+                <label for="contactPhone">Telefon raqamingiz *</label>
+                <input type="tel" id="contactPhone" class="contact-input" placeholder="+998 (90) 123-45-67" required>
+              </div>
+            </div>
+
+            <div class="contact-input-group">
+              <label>Qiziqtirayotgan xizmat yo‘nalishi:</label>
+              <div class="contact-chips" id="serviceChips">
+                <button type="button" class="contact-chip active" data-chip="Enterprise ERP / CRM">Enterprise ERP</button>
+                <button type="button" class="contact-chip" data-chip="High-Load Backend">High-Load Backend</button>
+                <button type="button" class="contact-chip" data-chip="Web & SaaS">Web & SaaS</button>
+                <button type="button" class="contact-chip" data-chip="Mobil Ilova">Mobil Ilova</button>
+                <button type="button" class="contact-chip" data-chip="UI/UX Dizayn">UI/UX Dizayn</button>
+                <button type="button" class="contact-chip" data-chip="DevOps & Cloud">DevOps</button>
+                <button type="button" class="contact-chip" data-chip="IT Konsalting">Konsalting</button>
+              </div>
+            </div>
+
+            <div class="contact-input-group">
+              <label for="contactMessage">Loyiha haqida qisqacha ma’lumot:</label>
+              <textarea id="contactMessage" class="contact-textarea" rows="4" placeholder="Loyiha maqsadi, kutilayotgan funksiyalar yoki mavjud texnik talablar..."></textarea>
+            </div>
+
+            <button type="submit" class="contact-submit-btn" id="serviceSubmitBtn">
+              <span>Texnik taklif va narx olish</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M7 17l9.2-9.2M17 17V7H7"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Direct Channels -->
+        <div class="contact-channels-card">
+          <div class="contact-channel-list">
+            <a href="https://t.me/topdevuz" target="_blank" rel="noopener" class="contact-channel-item">
+              <div class="contact-channel-left">
+                <span class="contact-channel-title">Telegram orqali tezkor javob</span>
+                <span class="contact-channel-value">@topdevuz</span>
+              </div>
+              <span class="contact-channel-action">Ochish ↗</span>
+            </a>
+
+            <a href="tel:+998712000000" class="contact-channel-item">
+              <div class="contact-channel-left">
+                <span class="contact-channel-title">To‘g‘ridan-to‘g‘ri qo‘ng‘iroq</span>
+                <span class="contact-channel-value">+998 (71) 200-00-00</span>
+              </div>
+              <span class="contact-channel-action">Qo‘ng‘iroq ↗</span>
+            </a>
+
+            <a href="mailto:info@topdev.uz" class="contact-channel-item">
+              <div class="contact-channel-left">
+                <span class="contact-channel-title">Rasmiy T/T va hujjatlar uchun</span>
+                <span class="contact-channel-value">info@topdev.uz</span>
+              </div>
+              <span class="contact-channel-action">Yozish ↗</span>
+            </a>
+
+            <div class="contact-channel-item static">
+              <div class="contact-channel-left">
+                <span class="contact-channel-title">Bosh ofis manzili</span>
+                <span class="contact-channel-value">Toshkent sh., Yunusobod tumani, IT Park rezidenti</span>
+              </div>
+              <span class="contact-channel-time">09:00 - 19:00</span>
+            </div>
+          </div>
+
+          <div class="contact-direct-foot">
+            <p>Barcha ma’lumotlar qat’iy maxfiylik shartnomasi (NDA) bilan himoyalanadi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- TECHNICAL SPECIFICATION MODAL DIALOG -->
+  <div class="service-spec-modal-overlay" id="serviceSpecModalOverlay" role="dialog" aria-modal="true" aria-labelledby="specModalTitle" aria-hidden="true">
+    <div class="service-spec-modal-card">
+      <button type="button" class="spec-modal-close-btn" id="serviceSpecModalClose" aria-label="Spetsifikatsiyani yopish">×</button>
+      
+      <span class="spec-modal-badge" id="specModalBadge">TEXNIK SPETSIFIKATSIYA</span>
+      <h3 class="spec-modal-title" id="specModalTitle">Xizmat Nomi</h3>
+      <p class="spec-modal-desc" id="specModalDesc">Batafsil arxitektura va imkoniyatlar sharhi.</p>
+
+      <div class="spec-modal-metrics-grid" id="specModalMetrics">
+        <!-- Injected via JS -->
+      </div>
+
+      <h4 class="spec-modal-section-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+        Arxitektura va Xavfsizlik Tamoyillari
+      </h4>
+      <div class="spec-arch-list" id="specModalArchList">
+        <!-- Injected via JS -->
+      </div>
+
+      <h4 class="spec-modal-section-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        4 Bosqichli Amalga Oshirish Rejasi
+      </h4>
+      <div class="spec-modal-roadmap" id="specModalRoadmap">
+        <!-- Injected via JS -->
+      </div>
+
+      <h4 class="spec-modal-section-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+        Tavsiya Etilgan Texnologik Stek
+      </h4>
+      <div class="spec-modal-stack" id="specModalStackTags">
+        <!-- Injected via JS -->
+      </div>
+
+      <div class="spec-modal-actions">
+        <button type="button" class="btn-spec-order" id="specModalOrderBtn">
+          <span>Ushbu Yo‘nalish Bo‘yicha Buyurtma Berish</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-wrap">
+    <div class="footer-minimal-card" data-reveal>
+      <div class="footer-minimal-middle">
+        <div class="footer-min-col">
+          <span class="footer-brand-title">TOPDEV<span class="dot">.</span></span>
+          <span class="footer-brand-desc">Yuqori Yuklamali Raqamli Muhandislik</span>
+        </div>
+        <div class="footer-min-col">
+          <span class="footer-col-header">TO‘G‘RIDAN-TO‘G‘RI HAVOLALAR</span>
+          <div class="footer-links-row">
+            <a href="portfolio.html">Portfolio</a>
+            <a href="service.html">Xizmatlar</a>
+            <a href="index.html#stacks">Texnologiyalar</a>
+            <a href="mailto:info@topdev.uz">Bog‘lanish</a>
+          </div>
+        </div>
+        <div class="footer-min-col">
+          <span class="footer-col-header">TARMOQLAR</span>
+          <div class="footer-links-row">
+            <a href="https://t.me/topdevuz" target="_blank" rel="noopener">Telegram ↗</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a>
+            <a href="https://github.com" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+        <div class="footer-min-col">
+          <span class="footer-col-header">BOSH QARORGOH</span>
+          <span class="footer-text-muted">Toshkent, O‘zbekiston</span>
+        </div>
+      </div>
+      <div class="footer-minimal-bottom">
+        <span>© 2026 TOPDEV MCHJ. BARCHA HUQUQLAR HIMOYALANGAN.</span>
+        <span>YUQORI YUKLAMA VA ISHONCHLILIK UCHUN</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/gsap.min.js" defer></script>
+  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/service.js" defer></script>
+</body>
+</html>
