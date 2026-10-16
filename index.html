@@ -1,673 +1,377 @@
 <!DOCTYPE html>
-<html lang="uz" class="no-js">
+<html lang="uz">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>TOPDEV — Yuqori Yuklamali Dasturiy Ta'minot &amp; IT Muhandislik</title>
-<meta name="description" content="TOPDEV — Maxsus dasturiy ta'minot va IT konsalting. Korporativ ERP, CRM va yuqori yuklamali tizimlar. Web, mobil va bulutli yechimlar. Toshkent.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TopDev.uz — Biznesingizga toʻgʻri dasturchi</title>
+<meta name="description" content="TopDev.uz — biznes egalarini tasdiqlangan dasturchilar va tayyor jamoalar bilan uchrashtiradigan oʻzbek platformasi.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TopDev.uz — Biznesingizga toʻgʻri dasturchi">
+<meta property="og:description" content="Sayt kerakmi — dev topamiz. Yechim kerakmi — jamoa bor.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='32' y='46' font-family='Archivo,Arial Black,Arial,sans-serif' font-weight='900' font-size='38' text-anchor='middle' fill='%230B3BFF'%3ETD%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/base.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&family=Manrope:wght@400;600&display=swap">
+<style>
+:root{--w:#FFFFFF;--k:#0A0A0A;--b:#0B3BFF;--d:'Archivo',Arial,sans-serif;--t:'Manrope',Arial,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--w)}
+*,*::before,*::after{box-sizing:inherit;margin:0;padding:0}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}.lenis.lenis-stopped{overflow:hidden}
+body{background:var(--w);color:var(--k);font:400 clamp(1rem,1.3vw,1.3rem)/1.5 var(--t);overflow-x:clip;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}a:focus-visible{outline:none}
+h1,h2,.num,.giant,#cnt,.big{font-family:var(--d);font-weight:800;letter-spacing:-.045em;line-height:.88}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+section{position:relative;min-height:100svh;padding:clamp(1rem,3vw,3rem);overflow:clip}
+[data-bg="#FFFFFF"]{color:var(--k)}[data-bg="#0A0A0A"],[data-bg="#0B3BFF"]{color:var(--w)}
+#bg,#bgT{position:fixed;inset:0;pointer-events:none}#bg{background:var(--w)}#bgT{background:var(--k);opacity:0;will-change:opacity}main{position:relative;z-index:1}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:.06em 0 .14em;margin:-.06em 0 -.14em}
+.c{display:inline-block;backface-visibility:hidden}.acc{color:var(--b)}
+.ol{color:transparent;-webkit-text-stroke:1px var(--sc,#fff)}
+.lnk{position:relative;display:inline-block;padding-bottom:.14em}
+.lnk::before{content:"";position:absolute;left:0;right:0;bottom:0;height:max(1px,.04em);background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .6s cubic-bezier(.7,0,.2,1)}
+.lnk:hover::before,.lnk:focus-visible::before{transform:scaleX(1)}
+.r{display:block;overflow:hidden}
+.r b{display:block;position:relative;font-weight:inherit;line-height:1.15;transition:transform .6s cubic-bezier(.7,0,.2,1)}
+.r b::after{content:attr(data-t);position:absolute;left:0;top:100%}
+.lnk:hover .r b,.lnk:focus-visible .r b{transform:translateY(-100%)}
+#pre{position:fixed;inset:0;z-index:50;will-change:transform;background:var(--k);color:var(--w);display:flex;align-items:flex-end;padding:clamp(1rem,3vw,3rem)}
+#pre{flex-direction:column;justify-content:space-between;align-items:flex-start;gap:clamp(2rem,5vw,4rem)}
+#pq{font:800 clamp(2.2rem,7vw,8rem)/.92 var(--d);letter-spacing:-.045em}
+#enter{background:none;border:0;color:inherit;font:800 clamp(1rem,3vw,3.2rem)/1 var(--d);letter-spacing:-.03em;cursor:pointer;align-self:flex-end;outline:none;-webkit-tap-highlight-color:transparent}
+#enter::before{transform:scaleX(1)}
+/* hero */
+#hero{display:flex;flex-direction:column;justify-content:space-between;gap:2rem}
+.top{display:flex;justify-content:space-between;font:600 .85rem var(--t);letter-spacing:.1em;text-transform:uppercase}
+#hero h1{font-size:clamp(2.6rem,10vw,11rem)}
+.sub{margin-left:min(30vw,36rem);max-width:34ch;font-weight:600;font-size:clamp(1.05rem,1.8vw,1.8rem);line-height:1.25;margin-top:1.5rem}
+.giant{will-change:transform;font-size:23vw;line-height:.78;color:var(--b);white-space:nowrap;margin:0 -2vw -.04em;user-select:none}
+/* problem */
+#prob{display:flex;align-items:center;padding-left:clamp(1rem,12vw,16rem)}
+.ghost{will-change:transform;position:absolute;right:-4vw;top:4vh;font-size:30vw;line-height:.8;pointer-events:none}
+#prob p{position:relative;font:700 clamp(1.9rem,5.4vw,6rem)/1.02 var(--d);letter-spacing:-.035em;max-width:min(80vw,1300px)}
+/* paths */
+#paths{padding:0;height:100svh}
+.panel{will-change:transform;position:absolute;inset:0;padding:clamp(1rem,3vw,3rem);display:flex;flex-direction:column;justify-content:flex-end;overflow:clip}
+.p1{background:var(--b);color:var(--w)}.p2{background:var(--w);color:var(--k)}.p3{background:var(--k);color:var(--w)}
+.panel h2{position:relative;z-index:1;font-size:clamp(3rem,13vw,15rem)}
+.panel p{position:relative;z-index:1;max-width:34ch;margin:1.4rem 0 0 min(40vw,40rem);font-size:clamp(1rem,1.5vw,1.5rem)}
+.num{position:absolute;top:-.08em;right:-.02em;font-size:clamp(12rem,40vw,46rem);line-height:.8;font-weight:900}
+.p2 .num{color:var(--b)}
+/* how */
+#how{display:flex;flex-direction:column;justify-content:center;gap:clamp(1.5rem,4vw,4rem)}
+.rule{height:1px;background:currentColor;transform-origin:left;margin-bottom:1rem}
+.step p{font:800 clamp(2.2rem,7vw,8rem)/.95 var(--d);letter-spacing:-.04em}
+.s2{margin-left:12vw}.s3{margin-left:24vw}
+#svc{display:flex;flex-direction:column;justify-content:center;gap:clamp(1.5rem,3vw,3rem)}
+.lab{font:600 .85rem var(--t);letter-spacing:.1em;text-transform:uppercase}
+.svc{list-style:none}.svc .rule{transform-origin:100% 50%;margin:0}
+.row{display:grid;grid-template-columns:clamp(2.5rem,6vw,6rem) 1fr minmax(0,30ch);align-items:baseline;gap:1rem;padding:clamp(.8rem,1.6vw,1.6rem) 0;transition:transform .6s cubic-bezier(.7,0,.2,1)}
+.row:hover{transform:translateX(1.5vw)}
+.row .n{font:600 .85rem var(--t);letter-spacing:.1em}
+.row h3{font:800 clamp(2.2rem,6.5vw,7.5rem)/.95 var(--d);letter-spacing:-.045em}
+.row p{font-size:clamp(.9rem,1.2vw,1.2rem);max-width:30ch}
+/* why */
+#why{display:flex;flex-direction:column;justify-content:center}
+#why h2{font-size:clamp(2.6rem,12vw,14rem)}
+#why span{display:block}#why span:nth-child(2){margin-left:14vw}#why span:nth-child(3){margin-left:4vw}#why span:nth-child(4){margin-left:20vw}
+/* tech */
+#tech{display:flex;flex-direction:column;justify-content:center;gap:2vw;padding-inline:0}
+.mq{will-change:transform;display:flex;width:max-content;white-space:nowrap;font:900 clamp(5rem,17vw,19rem)/.95 var(--d);letter-spacing:-.04em}
+.mq span{padding-right:.5em}
+/* dev */
+#dev{display:flex;flex-direction:column;justify-content:center;gap:clamp(2rem,5vw,5rem)}
+#dev h2{font-size:clamp(2.8rem,9.5vw,11rem)}
+.go{font:800 clamp(1.6rem,4vw,4.5rem)/1 var(--d);letter-spacing:-.03em;align-self:flex-end;margin-right:6vw}
+/* cta */
+#cta{display:flex;flex-direction:column;justify-content:flex-end;gap:clamp(2rem,6vw,6rem)}
+#cta h2{font-size:17vw;white-space:nowrap;margin-left:-.03em}
+.foot{display:flex;flex-wrap:wrap;gap:1rem 3rem;align-items:baseline;justify-content:space-between}
+.foot nav{display:flex;flex-wrap:wrap;gap:.8rem 3rem;font:800 clamp(1.2rem,2.4vw,2.4rem)/1 var(--d);letter-spacing:-.03em}
+.foot small{font-size:.8rem;display:block;margin-top:.8rem;max-width:44ch}
+@media(max-width:799px){
+html{-webkit-text-size-adjust:100%}a,button{-webkit-tap-highlight-color:transparent}
+/* umumiy: ekran balandligiga majburlamaymiz, kontent oʻz hajmicha */
+section{min-height:0;padding:4.5rem 1.25rem}
+/* PRELOADER: matn va tugma markazga yaqin, brauzer panellariga tegmaydi */
+#pre{height:100vh;height:100svh;bottom:auto;justify-content:center;gap:2.25rem;padding:calc(env(safe-area-inset-top,0px) + 1.5rem) 1.25rem calc(env(safe-area-inset-bottom,0px) + 4.5rem)}
+#pq{font-size:11.5vw;line-height:.95}
+#enter{margin-left:0;align-self:flex-start;text-align:left;font-size:6.4vw;line-height:1.12;padding:.9rem 0;min-height:48px}
+/* HERO */
+#hero{min-height:min(34rem,86svh);padding:1.25rem 1.25rem 2.5rem;gap:2rem}
+.top{font-size:.8rem;align-items:center}.top .lnk{padding:.7rem 0}
+#hero h1{font-size:11vw}
+.sub{margin-left:12vw;max-width:30ch;font-size:1.15rem;margin-top:1.25rem}
+.giant{font-size:24vw;margin:0 -2vw 0}
+/* MUAMMO */
+#prob{padding:5rem 1.25rem}#prob p{font-size:8.4vw;max-width:100%}
+.ghost{font-size:26vw;top:1.25rem;right:-3vw}
+/* 3 yoʻl */
+#paths{height:auto;padding:0}
+.panel{position:relative;min-height:0;padding:10.5rem 1.25rem 3rem}
+.panel h2{font-size:12.5vw}
+.panel p{margin:1.1rem 0 0;font-size:1.05rem;max-width:32ch}
+.num{font-size:44vw;top:.5rem;right:-.02em}
+/* QANDAY ISHLAYDI */
+#how{gap:2rem;padding:4.5rem 1.25rem}
+.rule{margin-bottom:.8rem}
+.step p{font-size:9vw}.s2{margin-left:6vw}.s3{margin-left:12vw}
+/* XIZMATLAR */
+#svc{gap:1.5rem;padding:4rem 1.25rem}
+.row{grid-template-columns:2.2rem 1fr;gap:.4rem .8rem;padding:1rem 0 1.15rem}
+.row:hover{transform:none}
+.row p{grid-column:2;max-width:none}.row h3{font-size:9vw}
+/* NIMA UCHUN */
+#why{padding:5rem 1.25rem}
+#why h2{font-size:11vw;line-height:.95}
+#why span:nth-child(n){margin-left:0}#why span:nth-child(even){margin-left:8vw}
+/* TEXNOLOGIYALAR */
+#tech{padding:3.5rem 0;gap:.5rem}
+.mq{font-size:4.6rem}
+/* DASTURCHI */
+#dev{gap:2.25rem;padding:5rem 1.25rem}
+#dev h2{font-size:9.5vw}
+.go{margin-right:0;align-self:flex-start;padding:.7rem 0;font-size:6.4vw}
+/* CTA + footer */
+#cta{gap:2.75rem;padding:5rem 1.25rem calc(env(safe-area-inset-bottom,0px) + 3rem)}
+#cta h2{font-size:14vw}
+.foot{flex-direction:column;align-items:flex-start;gap:1.5rem}
+.foot nav{flex-direction:column;gap:.7rem;font-size:1.5rem}.foot nav .lnk{padding:.3rem 0 .35rem}
+}
+@media(prefers-reduced-motion:reduce){#paths{height:auto}.panel{position:relative}#pre{display:none}}
+@media(prefers-reduced-motion:reduce) and (min-width:800px){.panel{min-height:100svh}}
+</style>
 </head>
 <body>
-<a href="#top" class="skip-link">Asosiy kontentga o‘tish</a>
-<div class="navbar-wrapper" id="navbarWrapper">
-<nav class="navbar wrap" id="navbar" aria-label="Asosiy navigatsiya">
-<a href="index.html" class="logo-mark">
-TOPDEV
-</a>
-<div class="nav-links">
-<a href="index.html" class="nav-link active">Bosh sahifa</a>
-<a href="portfolio.html" class="nav-link">Portfolio</a>
-<a href="service.html" class="nav-link">Xizmatlar</a>
-<a href="about.html" class="nav-link">Biz haqimizda</a>
-<a href="vacancy.html" class="nav-link">Vakansiyalar</a>
-</div>
-<div class="nav-actions">
-<a href="consultation.html" class="cta-btn">
-<span>Bog‘lanish</span>
-<svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-<path d="M2 10L10 2M10 2H3M10 2V9" stroke="currentColor" stroke-width="1.5" />
-</svg>
-</a>
-<button type="button" class="nav-burger" id="burgerBtn" aria-label="Navigatsiya menyusini ochish" aria-expanded="false" aria-controls="mobileMenu">
-<span></span><span></span><span></span>
-</button>
-</div>
-</nav>
-</div>
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Sayt navigatsiyasi" aria-hidden="true">
-<button type="button" class="mobile-close" id="mobileClose" aria-label="Menyuni yopish"></button>
-<a href="index.html">Bosh sahifa</a>
-<a href="portfolio.html">Portfolio</a>
-<a href="service.html">Xizmatlar</a>
-<a href="about.html">Biz haqimizda</a>
-<a href="vacancy.html">Vakansiyalar</a>
-<a href="consultation.html" style="color: var(--accent);">Bog‘lanish</a>
-</div>
-<main id="top" tabindex="-1">
-<section class="hero">
-<div class="wrap">
-<h1 class="hero-headline" data-reveal>
-Biz yuqori yuklamali<br>
-<span class="hero-highlight">reallikni quramiz.</span>
-</h1>
-<div class="hero-sub-row">
-<p class="hero-subtitle" data-reveal>
-Maxsus dasturiy ta'minot &amp; IT konsalting — ERP, CRM &amp; Yuqori yuklamali tizimlar — Web, Mobil &amp;
-Bulutli yechimlar.
-</p>
-<div class="hero-buttons" data-reveal>
-<a href="service.html" class="cta-btn">
-<span>Xizmatlar bilan tanishish</span>
-<svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-<path d="M2 10L10 2M10 2H3M10 2V9" stroke="currentColor" stroke-width="1.5" />
-</svg>
-</a>
-<a href="portfolio.html" class="cta-btn-outline">
-Portfolioni ko‘rish
-</a>
-</div>
-</div>
-</div>
+<div id="pre"><p id="pq" data-s="w" data-acc="-1">Siz oʻylang. Biz uni quradiganlarni topamiz — TOPDEV</p><button id="enter" class="lnk" type="button"><span class="r"><b data-t="Loyihangiz uchun kuchli dasturchilar →">Loyihangiz uchun kuchli dasturchilar →</b></span></button></div>
+
+<div id="bg" aria-hidden="true"></div><div id="bgT" aria-hidden="true"></div>
+<main>
+<section id="hero" data-bg="#FFFFFF" data-fg="#0A0A0A">
+  <div class="top fade"><span>TopDev.uz</span><a class="lnk" href="https://t.me/topdevadmin?text=Assalomu%20alaykum!%20TopDev.uz%20saytidan%20yozyapman.%20Loyiham%20uchun%20dasturchi%20kerak.%20Batafsil%20gaplasha%20olamizmi%3F" target="_blank" rel="noopener"><span class="r"><b data-t="Bogʻlanish">Bogʻlanish</b></span></a></div>
+  <div>
+    <h1 data-s="w" data-acc="-1">Biznesingizga toʻgʻri dasturchi.</h1>
+    <p class="sub fade">Sayt kerakmi — dev topamiz. Yechim kerakmi — jamoa bor.</p>
+  </div>
+  <div class="giant" data-s="c" aria-hidden="true">TOPDEV</div>
 </section>
-<div class="capabilities-bar" aria-label="Asosiy yo‘nalishlar">
-<div class="wrap capabilities-row">
-<div class="cap-item">
-<span class="cap-num">01</span>
-<span class="cap-label">KORPORATIV ERP &amp; CRM</span>
-</div>
-<div class="cap-sep" aria-hidden="true"></div>
-<div class="cap-item">
-<span class="cap-num">02</span>
-<span class="cap-label">YUQORI YUKLAMALI BACKEND</span>
-</div>
-<div class="cap-sep" aria-hidden="true"></div>
-<div class="cap-item">
-<span class="cap-num">03</span>
-<span class="cap-label">BULUT INFRATUZILMASI</span>
-</div>
-<div class="cap-sep" aria-hidden="true"></div>
-<div class="cap-item">
-<span class="cap-num">04</span>
-<span class="cap-label">MOBIL &amp; VEB EKOTIZIMLAR</span>
-</div>
-</div>
-</div>
-<section class="portfolio-section" id="portfolio">
-<div class="wrap">
-<div class="section-head">
-<div>
-<h2 class="section-title" data-reveal>Haqiqiy Natijalar Uchun Ishlangan.</h2>
-</div>
-</div>
-<div class="impact-portfolio-grid">
-<div class="impact-card" data-reveal>
-<div class="impact-top-row">
-<div class="impact-title-cell">
-<span class="impact-brand-title">PayCore</span>
-</div>
-<div class="impact-meta-cell">
-<span class="impact-client-tag"><b>FINTECH CORP</b></span>
-</div>
-</div>
-<div class="impact-card-body">
-<div class="impact-image-wrap">
-<img src="assets/images/paycore.jpg" alt="PayCore FinTech boshqaruv paneli" width="1280" height="720" loading="lazy" decoding="async">
-</div>
-<div class="impact-details">
-<h3 class="impact-proj-title">PayCore Engine</h3>
-<p class="impact-proj-desc">
-Qat'iy real vaqt auditiga ega milliy to‘lov shlyuzi va avtomatlashtirilgan ISO 20022 kliring tizimi.
-</p>
-</div>
-<div class="impact-stack-tags">
-<span>Go</span><span>Kafka</span><span>PostgreSQL</span><span>K8s</span>
-</div>
-</div>
-</div>
-<div class="impact-card" data-reveal>
-<div class="impact-top-row">
-<div class="impact-title-cell">
-<span class="impact-brand-title">ApexSupply</span>
-</div>
-<div class="impact-meta-cell">
-<span class="impact-client-tag"><b>LOGISTICS INT</b></span>
-</div>
-</div>
-<div class="impact-card-body">
-<div class="impact-image-wrap">
-<img src="assets/images/apexsupply.jpg" alt="ApexSupply ERP logistika boshqaruv paneli" width="1280" height="720" loading="lazy" decoding="async">
-</div>
-<div class="impact-details">
-<h3 class="impact-proj-title">ApexSupply ERP</h3>
-<p class="impact-proj-desc">
-Ko‘p omborli logistika yo‘nalishlari, inventar prognozi va real vaqt telemetriyasini boshqaruvchi
-markazlashgan ERP platformasi.
-</p>
-</div>
-<div class="impact-stack-tags">
-<span>React</span><span>Node.js</span><span>Redis</span><span>Docker</span>
-</div>
-</div>
-</div>
-<div class="impact-card" data-reveal>
-<div class="impact-top-row">
-<div class="impact-title-cell">
-<span class="impact-brand-title">NexusBank</span>
-</div>
-<div class="impact-meta-cell">
-<span class="impact-client-tag"><b>NEXUS GROUP</b></span>
-</div>
-</div>
-<div class="impact-card-body">
-<div class="impact-image-wrap">
-<img src="assets/images/nexus.jpg" alt="Nexus mobil bank interfeysi" width="1280" height="720" loading="lazy" decoding="async">
-</div>
-<div class="impact-details">
-<h3 class="impact-proj-title">Nexus Banking App</h3>
-<p class="impact-proj-desc">
-Biometrik ro‘yxatga olish, ko‘p valyutali hamyonlar va tezkor pul o‘tkazmalariga ega kross-platformali
-mobil bank ilovasi.
-</p>
-</div>
-<div class="impact-stack-tags">
-<span>Flutter</span><span>Swift</span><span>Kotlin</span><span>gRPC</span>
-</div>
-</div>
-</div>
-</div>
-<div class="portfolio-cta-row" data-reveal>
-<a href="portfolio.html" class="cta-btn-outline view-all-btn">
-<span>Barcha Loyihalarni Ko‘rish</span>
-<svg width="14" height="14" viewBox="0 0 12 12" fill="none">
-<path d="M2 10L10 2M10 2H3M10 2V9" stroke="currentColor" stroke-width="1.5" />
-</svg>
-</a>
-</div>
-</div>
+
+<section id="prob" data-bg="#0A0A0A" data-fg="#FFFFFF">
+  <div class="ghost ol num" aria-hidden="true">ISHONCH</div>
+  <h2 class="sr">Muammo</h2>
+  <p data-s="w">Dasturchi topish oson emas. Kimga ishonishni bilmaysiz. Pul toʻlaysiz, natija esa yoʻq. Biz buni oʻzgartiramiz.</p>
 </section>
-<section class="services wrap" id="services">
-<div class="section-head">
-<div>
-<h2 class="section-title" data-reveal>Bizning Xizmatlarimiz.</h2>
-</div>
-</div>
-<div class="services-minimal-grid" id="servicesList">
-<div class="service-minimal-card" data-reveal>
-<div>
-<div class="service-minimal-num">01 // HAMKORLIK</div>
-<h3 class="service-minimal-title">Fixed Price</h3>
-<p class="service-minimal-desc">
-Loyiha ko‘lami, byudjet va topshirish muddatlari oldindan qat'iy belgilanadi. Kutilmagan xarajatlarsiz,
-bosqichma-bosqich kafolatlangan ijro.
-</p>
-</div>
-<div class="service-minimal-specs">
-<span>Qat'iy Ko‘lam</span>
-<span>Bosqichma-bosqich Yetkazish</span>
-<span>Nol Xatar</span>
-</div>
-</div>
-<div class="service-minimal-card" data-reveal>
-<div>
-<div class="service-minimal-num">02 // HAMKORLIK</div>
-<h3 class="service-minimal-title">Outstaffing</h3>
-<p class="service-minimal-desc">
-Sizning jamoangizga to‘g‘ridan-to‘g‘ri integratsiya qilinadigan sinovdan o‘tgan senior muhandislar va
-maxsus guruhlar. To‘liq boshqaruv nazorati bilan tezkor ishga tushish.
-</p>
-</div>
-<div class="service-minimal-specs">
-<span>Senior Muhandislar</span>
-<span>Tez Boshlash</span>
-<span>To‘g‘ridan-to‘g‘ri Nazorat</span>
-</div>
-</div>
-<div class="service-minimal-card" data-reveal>
-<div>
-<div class="service-minimal-num">03 // HAMKORLIK</div>
-<h3 class="service-minimal-title">Time &amp; Material</h3>
-<p class="service-minimal-desc">
-Faqat sarflangan haqiqiy muhandislik soatlari va resurslar uchun to‘lov. O‘zgaruvchan talablar, uzluksiz
-yetkazish va Agile sprintlar uchun ideal.
-</p>
-</div>
-<div class="service-minimal-specs">
-<span>Moslashuvchan Ko‘lam</span>
-<span>Sprint Bo‘yicha To‘lov</span>
-<span>Shaffof Hisobot</span>
-</div>
-</div>
-<div class="service-minimal-card" data-reveal>
-<div>
-<div class="service-minimal-num">04 // MUHANDISLIK</div>
-<h3 class="service-minimal-title">Web Development</h3>
-<p class="service-minimal-desc">
-Bardoshli zamonaviy arxitektura (React, Next.js, Node.js va bulutli backend) asosida qurilgan to‘liq
-veb-ilovalar va yuqori tashrifli portallar.
-</p>
-</div>
-<div class="service-minimal-specs">
-<span>React / Next.js</span>
-<span>Node.js / Go</span>
-<span>Bulut Arxitekturasi</span>
-</div>
-</div>
-<div class="service-minimal-card" data-reveal>
-<div>
-<div class="service-minimal-num">05 // MUHANDISLIK</div>
-<h3 class="service-minimal-title">Mobile Development</h3>
-<p class="service-minimal-desc">
-Silliq 60fps interfeys, oflayn rejim va do‘konlarda nashr qilish imkoniyatiga ega iOS va Android uchun
-yuqori unumdor nativ va kross-platforma ilovalar.
-</p>
-</div>
-<div class="service-minimal-specs">
-<span>Flutter</span>
-<span>Swift (iOS)</span>
-<span>Kotlin (Android)</span>
-</div>
-</div>
-<div class="service-minimal-card" data-reveal>
-<div>
-<div class="service-minimal-num">06 // DIZAYN</div>
-<h3 class="service-minimal-title">UI/UX Dizayn</h3>
-<p class="service-minimal-desc">
-Foydalanuvchiga yo‘naltirilgan raqamli mahsulotlar, kengaytiriluvchi Figma dizayn-tizimlari, prototiplash,
-interaktiv modellar va UX qulaylik testlari.
-</p>
-</div>
-<div class="service-minimal-specs">
-<span>Figma Tizimlari</span>
-<span>Interaktiv Prototiplar</span>
-<span>Dizayn Tokenlari</span>
-</div>
-</div>
-</div>
+
+<section id="paths" data-bg="#0A0A0A" data-fg="#FFFFFF">
+  <article class="panel p1">
+    <div class="num ol" aria-hidden="true">01</div>
+    <h2 data-s="c">Dev kerak</h2>
+    <p>Biznes egasi sayt, bot yoki ilova uchun mutaxassisni shu yerdan topadi.</p>
+  </article>
+  <article class="panel p2">
+    <div class="num" aria-hidden="true">02</div>
+    <h2 data-s="c">Yechim kerak</h2>
+    <p>Murakkab loyiha va avtomatlashtirish uchun tayyor kompaniya bor. Muammoni ayting, qolganini ular hal qiladi.</p>
+  </article>
+  <article class="panel p3">
+    <div class="num ol" aria-hidden="true">03</div>
+    <h2 data-s="c">Tasdiqlangan dasturchilar</h2>
+    <p>Tekshirilgan dasturchilar bazasi. Oʻzingiz tanlang, ishni toʻgʻridan-toʻgʻri bering.</p>
+  </article>
 </section>
-<div id="about" style="scroll-margin-top: 80px;"></div>
-<section class="stacks-section wrap" id="stacks">
-<div class="section-head">
-<div>
-<h2 class="section-title" data-reveal>Bizning Steklarimiz.</h2>
-</div>
-<p class="section-note" data-reveal>Yuqori yuklamali ishlab chiqarish tizimlarimizni quvvatlovchi sinovdan
-o‘tgan dasturlash tillari, freymvorklar va infratuzilmalar.</p>
-</div>
-<div class="stack-tabs-nav" role="tablist" aria-label="Texnologiyalar toifalari" data-reveal>
-<button type="button" class="stack-tab-btn active" role="tab" aria-selected="true" data-tab="backend">Backend</button>
-<button type="button" class="stack-tab-btn" role="tab" aria-selected="false" data-tab="frontend">Frontend</button>
-<button type="button" class="stack-tab-btn" role="tab" aria-selected="false" data-tab="mobile">Mobile</button>
-<button type="button" class="stack-tab-btn" role="tab" aria-selected="false" data-tab="devops">DevOps &amp;
-Bulut</button>
-<button type="button" class="stack-tab-btn" role="tab" aria-selected="false" data-tab="qa">QA &amp;
-Audit</button>
-<button type="button" class="stack-tab-btn" role="tab" aria-selected="false" data-tab="design">Dizayn &amp;
-PM</button>
-</div>
-<div class="stack-panels-wrap" data-reveal>
-<div class="stack-panel active" id="tab-backend" role="tabpanel">
-<div class="stack-panel-grid">
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Node.js</span>
-<span class="stack-item-tag">High-Load API</span>
-</div>
-<p class="stack-item-desc">Asinxron mikroservislar va yuqori tezlikdagi ma'lumot oqimlari.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">.NET / C#</span>
-<span class="stack-item-tag">Enterprise Core</span>
-</div>
-<p class="stack-item-desc">Korporativ barqaror backend, bank va to‘lov shlyuzlari.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Apache Kafka</span>
-<span class="stack-item-tag">Event Streaming</span>
-</div>
-<p class="stack-item-desc">Taqsimlangan xabarlar navbati va real-vaqt tahlili.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">RabbitMQ</span>
-<span class="stack-item-tag">Message Broker</span>
-</div>
-<p class="stack-item-desc">Asinxron vazifalar va ishonchli xabarlar marshrutlash.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">GraphQL</span>
-<span class="stack-item-tag">Data Query</span>
-</div>
-<p class="stack-item-desc">Mijoz so‘rovlarini optimallash va ortiqcha yuklamani yo‘qotish.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">NATS</span>
-<span class="stack-item-tag">Microsecond Pub/Sub</span>
-</div>
-<p class="stack-item-desc">Ultra past kechikishli bulut ichi aloqa tizimi.</p>
-</div>
-</div>
-</div>
-<div class="stack-panel" id="tab-frontend" role="tabpanel">
-<div class="stack-panel-grid">
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Next.js</span>
-<span class="stack-item-tag">SSR &amp; Edge</span>
-</div>
-<p class="stack-item-desc">Tezkor yuklanish, to‘liq SEO va korporativ darajadagi veb ilovalar.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">React.js</span>
-<span class="stack-item-tag">Modular UI</span>
-</div>
-<p class="stack-item-desc">Kengaytiriluvchi komponent arxitekturasi va boy interfeyslar.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Vue.js / Nuxt</span>
-<span class="stack-item-tag">Reactive Web</span>
-</div>
-<p class="stack-item-desc">Tezkor prototiplash va yengil yuklanuvchi platformalar.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">TypeScript</span>
-<span class="stack-item-tag">Type Safety</span>
-</div>
-<p class="stack-item-desc">Qat'iy turlash va xatolarsiz keng ko‘lamli kod bazasi.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Tailwind CSS</span>
-<span class="stack-item-tag">Design System</span>
-</div>
-<p class="stack-item-desc">Nol-runtime uslublash va adaptiv zamonaviy dizayn tokenlari.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Material UI / Chakra</span>
-<span class="stack-item-tag">Component Lib</span>
-</div>
-<p class="stack-item-desc">Murakkab admin panellar va korporativ boshqaruv interfeyslari.</p>
-</div>
-</div>
-</div>
-<div class="stack-panel" id="tab-mobile" role="tabpanel">
-<div class="stack-panel-grid">
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Flutter</span>
-<span class="stack-item-tag">Cross-Platform 60fps</span>
-</div>
-<p class="stack-item-desc">Yagona kod bazasi bilan iOS va Android uchun nativ unumdorlik.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Swift (iOS)</span>
-<span class="stack-item-tag">Native Apple</span>
-</div>
-<p class="stack-item-desc">Apple ekotizimiga mos yuqori darajadagi xavfsiz iOS ilovalar.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Kotlin (Android)</span>
-<span class="stack-item-tag">Native Android</span>
-</div>
-<p class="stack-item-desc">Google tavsiya etgan zamonaviy nativ Android arxitekturasi.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Dart</span>
-<span class="stack-item-tag">Optimized Engine</span>
-</div>
-<p class="stack-item-desc">Mobil xotirani kam sarflovchi va silliq ishlovchi dasturlash tili.</p>
-</div>
-</div>
-</div>
-<div class="stack-panel" id="tab-devops" role="tabpanel">
-<div class="stack-panel-grid">
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Kubernetes (k8s)</span>
-<span class="stack-item-tag">Orchestration</span>
-</div>
-<p class="stack-item-desc">Avtomatik masshtablanish va uzluksiz ishlovchi klaster boshqaruvi.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Docker</span>
-<span class="stack-item-tag">Containerization</span>
-</div>
-<p class="stack-item-desc">Izolyatsiyalangan mikroservislar va tezkor deploy muhiti.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">FFmpeg</span>
-<span class="stack-item-tag">Media Pipeline</span>
-</div>
-<p class="stack-item-desc">Video va audio oqimlarini yuqori tezlikda qayta ishlash.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">k6 Load Testing</span>
-<span class="stack-item-tag">Performance</span>
-</div>
-<p class="stack-item-desc">Yuklama chegaralarini aniqlash va arxitektura chidamliligini sinash.</p>
-</div>
-</div>
-</div>
-<div class="stack-panel" id="tab-qa" role="tabpanel">
-<div class="stack-panel-grid">
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Playwright</span>
-<span class="stack-item-tag">Modern E2E</span>
-</div>
-<p class="stack-item-desc">Kross-brauzer avtomatlashtirilgan regressiya va barqaror testlar.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Cypress</span>
-<span class="stack-item-tag">Component &amp; UI</span>
-</div>
-<p class="stack-item-desc">Foydalanuvchi interfeys harakatlarini real vaqtda tekshirish.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Postman</span>
-<span class="stack-item-tag">API Testing</span>
-</div>
-<p class="stack-item-desc">REST va GraphQL API larining xavfsizlik va javob vaqti auditi.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Cucumber</span>
-<span class="stack-item-tag">BDD Specs</span>
-</div>
-<p class="stack-item-desc">Biznes talablari va texnik ssenariylar asosida qabul testlari.</p>
-</div>
-</div>
-</div>
-<div class="stack-panel" id="tab-design" role="tabpanel">
-<div class="stack-panel-grid">
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Figma</span>
-<span class="stack-item-tag">Design Systems</span>
-</div>
-<p class="stack-item-desc">Komponentlar kutubxonasi, autolayout va ishlab chiqarish maketlari.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Framer</span>
-<span class="stack-item-tag">Interactive Proto</span>
-</div>
-<p class="stack-item-desc">Yuqori sifatli animatsion modellar va mikro-interaksiyalar.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Jira Software</span>
-<span class="stack-item-tag">Agile &amp; Scrum</span>
-</div>
-<p class="stack-item-desc">Sprint rejalashtirish, vazifalar nazorati va shaffof KPI.</p>
-</div>
-<div class="stack-item-card">
-<div class="stack-item-head">
-<span class="stack-item-name">Airtable</span>
-<span class="stack-item-tag">Data Workflows</span>
-</div>
-<p class="stack-item-desc">Moslashuvchan ma'lumotlar boshqaruvi va avtomatlashtirilgan jarayonlar.</p>
-</div>
-</div>
-</div>
-</div>
+
+<section id="how" data-bg="#FFFFFF" data-fg="#0A0A0A">
+  <h2 class="sr">Qanday ishlaydi</h2>
+  <div class="step"><div class="rule"></div><p data-s="w">Vazifani yozing →</p></div>
+  <div class="step s2"><div class="rule"></div><p data-s="w">Dasturchi yoki kompaniyani tanlang →</p></div>
+  <div class="step s3"><div class="rule"></div><p data-s="w">Natijani oling.</p></div>
 </section>
-<section class="contact-section" id="contact">
-<div class="wrap">
-<div class="section-head hr">
-<div>
-<h2 class="section-title" data-reveal>Gaplashamizmi?</h2>
-</div>
-<p class="section-note" data-reveal>Ortiqcha gaplarsiz, 2 soat ichida
-kafolatlangan arxitektura javobi.</p>
-</div>
-<div class="contact-modular-grid">
-<div class="contact-card" data-reveal>
-<div class="contact-top-row">
-<span class="contact-brand-title">So‘rov<span class="contact-dot">.</span></span>
-</div>
-<div class="contact-card-body">
-<form class="contact-form" id="contactForm">
-<div class="contact-input-group">
-<label for="contactName">Ismingiz / Kompaniya nomi</label>
-<input type="text" id="contactName" name="name" class="contact-input" placeholder="Masalan: Alisher / Paytech MCHJ" required>
-</div>
-<div class="contact-form-row">
-<div class="contact-input-group">
-<label for="contactEmail">Email yoki Telegram</label>
-<input type="text" id="contactEmail" name="contact" class="contact-input" placeholder="Masalan: alisher@corp.uz yoki @username" required>
-</div>
-<div class="contact-input-group">
-<label for="contactPhone">Telefon raqam</label>
-<input type="tel" id="contactPhone" name="phone" class="contact-input" placeholder="+998 (90) 123-45-67">
-</div>
-</div>
-<div class="contact-input-group">
-<label>Hamkorlik yo‘nalishi</label>
-<div class="contact-chips" id="serviceChips">
-<span class="contact-chip active" data-service="High-Load Backend">High-Load Backend</span>
-<span class="contact-chip" data-service="Web / Bulut">Web / Bulut</span>
-<span class="contact-chip" data-service="Mobil Ilova">Mobil Ilova</span>
-<span class="contact-chip" data-service="Maxsus Jamoa (Squad)">Maxsus Jamoa (Squad)</span>
-</div>
-</div>
-<div class="contact-input-group">
-<label for="contactMessage">Loyiha talablari</label>
-<textarea id="contactMessage" name="message" class="contact-textarea" rows="3" placeholder="Tizim talablari, kutilayotgan yuklama yoki taxminiy muddatni qisqacha tavsiflang..."></textarea>
-</div>
-<button type="submit" class="contact-submit-btn" id="submitBtn">
-Loyiha So‘rovini Yuborish
-</button>
-<div class="contact-success-msg" id="contactSuccess" style="display: none;">
-So‘rovingiz qabul qilindi. 2 soat ichida muhandisimiz siz bilan bog‘lanadi.
-</div>
-</form>
-</div>
-</div>
-<div class="contact-card" data-reveal>
-<div class="contact-top-row">
-<span class="contact-brand-title">To‘g‘ridan-to‘g‘ri<span class="contact-dot">.</span></span>
-</div>
-<div class="contact-card-body">
-<div class="contact-channel-list">
-<a href="https://t.me/topdevadmin" target="_blank" rel="noopener" class="contact-channel-item">
-<div class="contact-channel-left">
-<span class="contact-channel-title">Telegram (Eng tezkor)</span>
-<span class="contact-channel-value">@topdevadmin</span>
-</div>
-<span class="contact-channel-action">Chat</span>
-</a>
-<a href="mailto:info@topdev.uz" class="contact-channel-item">
-<div class="contact-channel-left">
-<span class="contact-channel-title">Rasmiy RFP / Email</span>
-<span class="contact-channel-value">info@topdev.uz</span>
-</div>
-<span class="contact-channel-action">Yozish</span>
-</a>
-<a href="tel:+998332220301" class="contact-channel-item">
-<div class="contact-channel-left">
-<span class="contact-channel-title">To‘g‘ridan-to‘g‘ri Telefon</span>
-<span class="contact-channel-value">+998 33 222 03 01</span>
-</div>
-<span class="contact-channel-action">Qo‘ng‘iroq</span>
-</a>
-<div class="contact-channel-item static">
-<div class="contact-channel-left">
-<span class="contact-channel-title">Muhandislik Bosh Qarorgohi</span>
-<span class="contact-channel-value">Toshkent, Mirzo Ulug‘bek</span>
-</div>
-<span class="contact-channel-time">09:00 — 19:00</span>
-</div>
-</div>
-<div class="contact-direct-foot">
-<p>Mavjud kod bazangiz yoki arxitektura loyihangiz bormi? Fayllarni to‘g‘ridan-to‘g‘ri
-<b>info@topdev.uz</b> ga yuboring.
-</p>
-</div>
-</div>
-</div>
-</div>
-</div>
+
+<section id="svc" data-bg="#0A0A0A" data-fg="#FFFFFF">
+  <h2 class="lab">Xizmatlar</h2>
+  <ul class="svc">
+    <li><div class="rule"></div><div class="row"><span class="n">01</span><h3 data-s="w">Sayt</h3><p>Landing, korporativ sayt, onlayn doʻkon va veb-platformalar.</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">02</span><h3 data-s="w">Ilova</h3><p>Biznes jarayonlaringiz uchun maxsus veb va mobil ilovalar.</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">03</span><h3 data-s="w">iPhone</h3><p>iOS ilovalari, App Store uchun tayyor holda.</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">04</span><h3 data-s="w">Android</h3><p>Android ilovalari, Google Play uchun tayyor holda.</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">05</span><h3 data-s="w">Bot</h3><p>Telegram botlar: buyurtma, toʻlov va mijozlar bilan aloqa.</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">06</span><h3 data-s="w">AI integratsiya</h3><p>Sunʼiy intellektni biznesingizga ulash: yordamchi, tahlil, avtomatlashtirish.</p></div></li>
+  </ul>
+</section>
+
+<section id="why" data-bg="#0B3BFF" data-fg="#FFFFFF">
+  <h2><span>Tasdiqlangan.</span><span>Tez.</span><span>Shaffof.</span><span>Oʻzbekcha.</span></h2>
+</section>
+
+<section id="tech" data-bg="#0A0A0A" data-fg="#FFFFFF">
+  <h2 class="sr">Texnologiyalar</h2>
+  <div class="mq" aria-hidden="true"><span>Laravel /</span><span>React /</span><span>Flutter /</span><span>Python /</span><span>Node /</span><span>Telegram Bot /</span><span>Figma /</span><span>Swift /</span><span>Kotlin /</span><span>AI /</span></div>
+  <div class="mq ol" aria-hidden="true"><span>AI /</span><span>Kotlin /</span><span>Swift /</span><span>Figma /</span><span>Telegram Bot /</span><span>Node /</span><span>Python /</span><span>Flutter /</span><span>React /</span><span>Laravel /</span></div>
+</section>
+
+<section id="dev" data-bg="#FFFFFF" data-fg="#0A0A0A">
+  <h2 data-s="c" data-acc="-1">Dasturchimisiz? Mijozlar sizni kutmoqda.</h2>
+  <a class="lnk go" href="#"><span class="r"><b data-t="Roʻyxatdan oʻtish →">Roʻyxatdan oʻtish →</b></span></a>
+</section>
+
+<section id="cta" data-bg="#0A0A0A" data-fg="#FFFFFF">
+  <h2 data-s="c">Boshlaymiz.</h2>
+  <footer class="foot">
+    <div>
+      <nav aria-label="Aloqa">
+        
+        <a class="lnk" href="https://t.me/topdevuz" target="_blank" rel="noopener"><span class="r"><b data-t="Telegram">Telegram</b></span></a>
+        <a class="lnk" href="https://www.instagram.com/topdev.uz/" target="_blank" rel="noopener"><span class="r"><b data-t="Instagram">Instagram</b></span></a>
+        <a class="lnk" href="mailto:hello@topdev.uz"><span class="r"><b data-t="hello@topdev.uz">hello@topdev.uz</b></span></a>
+        <a class="lnk" href="tel:+998701638304"><span class="r"><b data-t="70 163-83-04">70 163-83-04</b></span></a>
+      </nav>
+      
+    </div>
+    <p>© 2026 TopDev.uz</p>
+  </footer>
 </section>
 </main>
-<footer class="minimal-footer wrap">
-<div class="footer-minimal-card" data-reveal>
-<div class="footer-minimal-middle">
-<div class="footer-min-col">
-<span class="footer-brand-title">TOPDEV<span class="dot">.</span></span>
-<span class="footer-brand-desc">Yuqori Yuklamali Raqamli Muhandislik</span>
-</div>
-<div class="footer-min-col">
-<span class="footer-col-header">TO‘G‘RIDAN-TO‘G‘RI HAVOLALAR</span>
-<div class="footer-links-row">
-<a href="portfolio.html">Portfolio</a>
-<a href="service.html">Xizmatlar</a>
-<a href="index.html#stacks">Texnologiyalar</a>
-<a href="mailto:info@topdev.uz">Bog‘lanish</a>
-</div>
-</div>
-<div class="footer-min-col">
-<span class="footer-col-header">TARMOQLAR</span>
-<div class="footer-links-row">
-<a href="https://t.me/topdevuz" target="_blank" rel="noopener">Telegram ↗</a>
-<a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a>
-<a href="https://github.com" target="_blank" rel="noopener">GitHub ↗</a>
-</div>
-</div>
-<div class="footer-min-col">
-<span class="footer-col-header">BOSH QARORGOH</span>
-<span class="footer-text-muted">Toshkent, O‘zbekiston</span>
-</div>
-</div>
-<div class="footer-minimal-bottom">
-<span>© 2026 TOPDEV MCHJ. BARCHA HUQUQLAR HIMOYALANGAN.</span>
-<span>YUQORI YUKLAMA VA ISHONCHLILIK UCHUN</span>
-</div>
-</div>
-</footer>
-<script src="assets/vendor/gsap.min.js" defer></script>
-<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
-<script src="js/main.js" defer></script>
-<script src="js/home.js" defer></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+const $=(s,r=document)=>[...r.querySelectorAll(s)];
+const pre=$('#pre')[0],RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// Split text into masked words (m="w") or masked words with chars (m="c")
+function split(el,m){
+  const t=el.textContent.trim();el.setAttribute('aria-label',t);
+  el.innerHTML=t.split(' ').map(w=>`<span class="w${w==='→'?' acc':''}" aria-hidden="true">${m==='c'?[...w].map(c=>`<span class="c">${c}</span>`).join(''):`<span class="c">${w}</span>`}</span>`).join(' ');
+  if(el.dataset.acc){const w=$('.w',el);w[(+el.dataset.acc+w.length)%w.length].classList.add('acc')}
+}
+$('[data-s]').forEach(e=>split(e,e.dataset.s));
+
+
+// Rang oʻtishi skrollga bogʻliq va faqat opacity bilan (GPU): pastki qatlam joriy rangda, ustki qatlam keyingi rangga fade boʻladi
+function theme(){
+  const S=$('[data-bg]'),base=$('#bg')[0],top=$('#bgT')[0];
+  S.forEach((s,i)=>{if(!i)return;const a=S[i-1].dataset.bg,b=s.dataset.bg;if(a===b)return;
+    ScrollTrigger.create({trigger:s,start:'top 100%',end:'top 30%',
+      onToggle:t=>{if(t.isActive){base.style.backgroundColor=a;top.style.backgroundColor=b}},
+      onUpdate:t=>{top.style.opacity=t.progress},
+      onLeave:()=>{base.style.backgroundColor=b;top.style.opacity=0},
+      onLeaveBack:()=>{base.style.backgroundColor=a;top.style.opacity=0}})});
+}
+function init(){
+  const lenis=new Lenis({lerp:.085,wheelMultiplier:.9});lenis.stop();
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);
+
+  // HERO + preloader
+  gsap.set(['#hero h1 .c','.giant .c'],{yPercent:110});gsap.set('.fade',{opacity:0});
+  gsap.set('#pq .c',{yPercent:110});gsap.set('#enter',{opacity:0,y:20});
+  gsap.timeline({delay:.3,onComplete:()=>$('#enter')[0].focus({preventScroll:true})}).to('#pq .c',{yPercent:0,duration:1.2,ease:'expo.out',stagger:.09}).to('#enter',{opacity:1,y:0,duration:1,ease:'power3.out'},'-=.5');
+  // Tugma bosilgach: matn chiqib ketadi, ekran yuqoriga ochiladi, hero boshlanadi (bosish musiqani ham ochadi)
+  $('#enter')[0].addEventListener('click',()=>gsap.timeline()
+    .to('#pq .c',{yPercent:-110,duration:.7,ease:'power3.in',stagger:.03})
+    .to('#enter',{opacity:0,duration:.4},'<')
+    .to(pre,{yPercent:-100,duration:1.1,ease:'expo.inOut',onComplete:()=>pre.remove()},'-=.1')
+    .add(()=>lenis.start(),'<.6')
+    .to('#hero h1 .c',{yPercent:0,duration:1.2,ease:'expo.out',stagger:.08},'<.2')
+    .to('.giant .c',{yPercent:0,duration:1.3,ease:'expo.out',stagger:.06},'<.1')
+    .to('.fade',{opacity:1,duration:1},'<.4'),{once:true});
+  gsap.to('.giant',{xPercent:-14,scaleX:1.08,transformOrigin:'0 100%',ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
+
+  // PROBLEM: scroll-scrubbed words
+  gsap.fromTo('#prob .c',{opacity:.15},{opacity:1,stagger:.1,ease:'none',scrollTrigger:{trigger:'#prob p',start:'top 80%',end:'bottom 45%',scrub:true}});
+  gsap.fromTo('.ghost',{yPercent:-15},{yPercent:25,ease:'none',scrollTrigger:{trigger:'#prob',scrub:true}});
+
+  // PATHS: pinned stack on desktop, vertical scenes on mobile
+  gsap.matchMedia().add({d:'(min-width:800px)'},ctx=>{
+    const P=$('.panel'),T=P.map(p=>$('h2 .c',p)),
+    V=[{xPercent:-120,stagger:.04},{yPercent:120,rotate:18,stagger:.04},{xPercent:120,skewX:-30,stagger:.04}];
+    if(ctx.conditions.d){
+      gsap.set(P.slice(1),{yPercent:100});
+      gsap.from(T[0],{...V[0],duration:1.1,ease:'expo.out',scrollTrigger:{trigger:'#paths',start:'top 60%'}});
+      const tl=gsap.timeline({scrollTrigger:{trigger:'#paths',pin:true,scrub:true,end:'+=260%'}});tl.to({},{duration:.3});
+      [1,2].forEach(i=>tl.to(P[i],{yPercent:0,duration:1,ease:'power2.inOut'}).to(P[i-1],{yPercent:-10,duration:1,ease:'power2.inOut'},'<').from(T[i],{...V[i],stagger:{amount:.4},duration:.5,ease:'power3.out'},'<.45').to({},{duration:.5}));
+    }else T.forEach((t,i)=>gsap.from(t,{...V[i],duration:1.1,ease:'expo.out',scrollTrigger:{trigger:t[0],start:'top 85%'}}));
+  });
+
+  // HOW: hairline draws, then text rises
+  $('.step').forEach(s=>gsap.timeline({scrollTrigger:{trigger:s,start:'top 80%'}})
+    .from($('.rule',s),{scaleX:0,duration:1.2,ease:'expo.inOut'})
+    .from($('.c',s),{yPercent:110,duration:1,ease:'expo.out',stagger:.05},'<.3'));
+
+  // SERVICES: hairline draws from the right, names slide in from the left edge
+  $('#svc li').forEach(li=>gsap.timeline({scrollTrigger:{trigger:li,start:'top 88%'}})
+    .from($('.rule',li),{scaleX:0,duration:1.1,ease:'expo.inOut'})
+    .from($('.c',li),{xPercent:-105,duration:1,ease:'expo.out'},'<.2')
+    .from($('.n,p',li),{opacity:0,duration:.8},'<.2'));
+
+  // WHY: each word its own motion
+  gsap.matchMedia().add({d:'(min-width:800px)'},ctx=>{
+    const W=$('#why span'),Y=[{xPercent:-60},{rotate:-20,yPercent:100,transformOrigin:'0 100%'},{scaleY:0,transformOrigin:'50% 100%'},{skewX:40,xPercent:60}];
+    if(ctx.conditions.d){
+      const tl=gsap.timeline({scrollTrigger:{trigger:'#why',pin:true,scrub:true,end:'+=150%'}});
+      W.forEach((w,i)=>tl.from(w,{...Y[i],opacity:0,duration:1,ease:'power3.out'},i*.9));
+    }else W.forEach((w,i)=>gsap.from(w,{...Y[i],opacity:0,duration:1.1,ease:'power3.out',scrollTrigger:{trigger:w,start:'top 85%'}}));
+  });
+
+  // TECH marquees: speed and skew follow scroll velocity
+  const M=$('.mq').map((el,i)=>{el.innerHTML+=el.innerHTML;return{el,d:i?1:-1,x:0,w:1,s:0}});
+  const meas=()=>M.forEach(m=>m.w=m.el.scrollWidth/2);
+  document.fonts.ready.then(()=>{meas();ScrollTrigger.refresh()});addEventListener('resize',meas);
+  let vel=0,sv=0,mOn=false;lenis.on('scroll',e=>vel=e.velocity);ScrollTrigger.create({trigger:'#tech',start:'top bottom',end:'bottom top',onToggle:t=>mOn=t.isActive});
+  gsap.ticker.add((t,dt)=>{if(!mOn)return;const k=Math.min(dt,50)/16.67;sv+=(vel-sv)*Math.min(.12*k,1);vel*=Math.pow(.9,k);const a=Math.min(Math.abs(sv),50);
+    M.forEach(m=>{m.x=(m.x+m.d*(1.2+a*.5)*k)%m.w;m.s+=(gsap.utils.clamp(-18,18,-sv*.45)-m.s)*Math.min(.12*k,1);
+      m.el.style.transform=`translate3d(${m.d<0?m.x:m.x-m.w}px,0,0) skewX(${m.s}deg)`})});
+
+  // DEV: char rotation reveal
+  gsap.from('#dev .c',{yPercent:130,rotate:14,transformOrigin:'0 100%',duration:1,ease:'expo.out',stagger:.02,scrollTrigger:{trigger:'#dev',start:'top 55%'}});
+  gsap.from('.go',{opacity:0,x:-40,duration:1,delay:.4,scrollTrigger:{trigger:'#dev',start:'top 40%'}});
+
+  // CTA: letters change weight near the pointer
+  const cc=$('#cta h2 .c');cc[cc.length-1].style.color='var(--b)';
+  gsap.from(cc,{yPercent:120,duration:1.2,ease:'expo.out',stagger:.05,scrollTrigger:{trigger:'#cta',start:'top 50%'}});
+  let on=false,px=0,py=0,busy=false,C=[];const cache=()=>{C=cc.map(c=>{const r=c.getBoundingClientRect();return{x:r.left+r.width/2,y:r.top+r.height/2+scrollY}})};const qy=cc.map(c=>gsap.quickTo(c,'y',{duration:.7,ease:'power3.out'})),qk=cc.map(c=>gsap.quickTo(c,'skewX',{duration:.7,ease:'power3.out'}));ScrollTrigger.create({trigger:'#cta',start:'top 80%',onToggle:t=>{on=t.isActive;if(on)setTimeout(cache,1700)}});addEventListener('resize',()=>on&&cache());theme();
+  addEventListener('pointermove',e=>{if(!on||busy||!C.length)return;px=e.clientX;py=e.clientY;busy=true;requestAnimationFrame(()=>{busy=false;C.forEach((p,i)=>{const dx=px-p.x,f=Math.max(0,1-Math.hypot(dx,py-(p.y-scrollY))/(innerWidth*.28));qy[i](-f*innerWidth*.012);qk[i](gsap.utils.clamp(-20,20,dx*-.03)*f)})})},{passive:true});
+    
+    
+
+}
+
+// Sokin generativ musiqa (Web Audio, fayl kerak emas). Skroll, tugma yoki teginishda urinib koradi; brauzer ruxsat bergach boshlanadi.
+(function(){
+  const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;
+  const E=['wheel','touchmove','scroll','pointerdown','keydown','touchend','click'];
+  const m2f=m=>440*Math.pow(2,(m-69)/12);
+  // Cmaj7 - Am7 - Fmaj7 - G6: [bass, pad notes] (MIDI)
+  const CH=[[36,[55,59,64]],[45,[52,55,60]],[41,[52,57,60]],[43,[55,59,62]]];
+  let ctx,master,lp,started=false,last=0,bar=0,timer;
+  function tone(f,t,a,d,g,type){const o=ctx.createOscillator(),v=ctx.createGain();o.type=type;o.frequency.value=f;
+    v.gain.setValueAtTime(0,t);v.gain.linearRampToValueAtTime(g,t+a);v.gain.exponentialRampToValueAtTime(.0001,t+a+d);
+    o.connect(v);v.connect(lp);o.start(t);o.stop(t+a+d+.1)}
+  function play(t0){
+    const [b,p]=CH[bar++%4];
+    tone(m2f(b),t0,1.5,6.5,.16,'sine');
+    p.forEach(n=>{tone(m2f(n),t0,2,6,.05,'triangle');tone(m2f(n)*1.004,t0,2,6,.03,'sine')});
+    const pool=[...p,p[0]+12];
+    for(let i=0;i<8;i++)if(Math.random()<.65){const f=m2f(pool[Math.floor(Math.random()*pool.length)]+12),t=t0+i+Math.random()*.08;
+      tone(f,t,.01,2.4,.07,'sine');tone(f*2,t,.01,.9,.015,'sine')}
+    timer=setTimeout(()=>play(Math.max(t0+8,ctx.currentTime+.1)),Math.max(0,(t0+6.5-ctx.currentTime)*1000))}
+  function build(){
+    ctx=new AC();master=ctx.createGain();master.gain.value=0;
+    lp=ctx.createBiquadFilter();lp.type='lowpass';lp.frequency.value=1100;
+    const n=ctx.sampleRate*4,buf=ctx.createBuffer(2,n,ctx.sampleRate);
+    for(let c=0;c<2;c++){const d=buf.getChannelData(c);for(let i=0;i<n;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/n,3)}
+    const rv=ctx.createConvolver(),wet=ctx.createGain();rv.buffer=buf;wet.gain.value=.55;
+    lp.connect(master);lp.connect(rv);rv.connect(wet);wet.connect(master);master.connect(ctx.destination)}
+  function start(){if(started)return;started=true;E.forEach(t=>removeEventListener(t,attempt,true));
+    master.gain.setTargetAtTime(.3,ctx.currentTime,2);play(ctx.currentTime+.2)}
+  function attempt(){const n=performance.now();if(started||n-last<500)return;last=n;
+    if(!ctx)build();
+    ctx.resume().then(()=>{if(ctx.state==='running')start()}).catch(()=>{})}
+  E.forEach(t=>addEventListener(t,attempt,{capture:true,passive:true}));
+  document.addEventListener('visibilitychange',()=>{if(!started)return;
+    if(document.hidden){clearTimeout(timer);ctx.suspend()}else ctx.resume().then(()=>play(ctx.currentTime+.2))});
+})();
+if(!window.gsap||!window.Lenis){pre.remove()}
+else{gsap.registerPlugin(ScrollTrigger);ScrollTrigger.config({ignoreMobileResize:true});if(RM){pre.remove();theme()}else init()}
+</script>
 </body>
 </html>
