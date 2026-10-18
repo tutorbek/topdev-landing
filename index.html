@@ -3,12 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
 <title>TopDev.uz — Biznesingizga toʻgʻri dasturchi</title>
 <meta name="description" content="TopDev.uz — biznes egalarini tasdiqlangan dasturchilar va tayyor jamoalar bilan uchrashtiradigan oʻzbek platformasi.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="TopDev.uz — Biznesingizga toʻgʻri dasturchi">
-<meta property="og:description" content="Sayt kerakmi — dev topamiz. Yechim kerakmi — jamoa bor.">
+<meta property="og:description" content="Sayt, bot yoki ilova kerakmi? Vazifani yozing, tekshirilgan dasturchi yoki jamoa tez javob beradi.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='32' y='46' font-family='Archivo,Arial Black,Arial,sans-serif' font-weight='900' font-size='38' text-anchor='middle' fill='%230B3BFF'%3ETD%3C/text%3E%3C/svg%3E">
+<!-- ANALYTICS (namuna): bu yerga Yandex Metrika yoki GA4 kodini joylang. Aloqa havolalari bosilishi pastdagi skriptda dataLayer/ym ga yuboriladi (window.YM_ID ni belgilang) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&family=Manrope:wght@400;600&display=swap">
@@ -21,7 +23,7 @@ body{background:var(--w);color:var(--k);font:400 clamp(1rem,1.3vw,1.3rem)/1.5 va
 a{color:inherit;text-decoration:none}a:focus-visible{outline:none}
 h1,h2,.num,.giant,#cnt,.big{font-family:var(--d);font-weight:800;letter-spacing:-.045em;line-height:.88}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-section{position:relative;min-height:100svh;padding:clamp(1rem,3vw,3rem);overflow:clip}
+section{position:relative;min-height:100vh;min-height:100svh;padding:clamp(1rem,3vw,3rem);overflow:clip}
 [data-bg="#FFFFFF"]{color:var(--k)}[data-bg="#0A0A0A"],[data-bg="#0B3BFF"]{color:var(--w)}
 #bg,#bgT{position:fixed;inset:0;pointer-events:none}#bg{background:var(--w)}#bgT{background:var(--k);opacity:0;will-change:opacity}main{position:relative;z-index:1}
 .w{display:inline-block;overflow:hidden;vertical-align:top;padding:.06em 0 .14em;margin:-.06em 0 -.14em}
@@ -88,57 +90,68 @@ section{position:relative;min-height:100svh;padding:clamp(1rem,3vw,3rem);overflo
 .foot{display:flex;flex-wrap:wrap;gap:1rem 3rem;align-items:baseline;justify-content:space-between}
 .foot nav{display:flex;flex-wrap:wrap;gap:.8rem 3rem;font:800 clamp(1.2rem,2.4vw,2.4rem)/1 var(--d);letter-spacing:-.03em}
 .foot small{font-size:.8rem;display:block;margin-top:.8rem;max-width:44ch}
+@media(max-width:799px){#enter{margin-left:0}#paths{height:auto}.panel{position:relative;min-height:100svh}.panel p{margin-left:0}.s2{margin-left:6vw}.s3{margin-left:12vw}#why span:nth-child(n){margin-left:0}#why span:nth-child(even){margin-left:8vw}}
 @media(max-width:799px){
 html{-webkit-text-size-adjust:100%}a,button{-webkit-tap-highlight-color:transparent}
-/* umumiy: ekran balandligiga majburlamaymiz, kontent oʻz hajmicha */
-section{min-height:0;padding:4.5rem 1.25rem}
-/* PRELOADER: matn va tugma markazga yaqin, brauzer panellariga tegmaydi */
-#pre{height:100vh;height:100svh;bottom:auto;justify-content:center;gap:2.25rem;padding:calc(env(safe-area-inset-top,0px) + 1.5rem) 1.25rem calc(env(safe-area-inset-bottom,0px) + 4.5rem)}
+#pre{height:100svh;bottom:auto;padding:max(1.25rem,env(safe-area-inset-top)) 1.25rem max(1.5rem,env(safe-area-inset-bottom))}
 #pq{font-size:11.5vw;line-height:.95}
-#enter{margin-left:0;align-self:flex-start;text-align:left;font-size:6.4vw;line-height:1.12;padding:.9rem 0;min-height:48px}
-/* HERO */
-#hero{min-height:min(34rem,86svh);padding:1.25rem 1.25rem 2.5rem;gap:2rem}
-.top{font-size:.8rem;align-items:center}.top .lnk{padding:.7rem 0}
+#enter{align-self:flex-start;text-align:left;font-size:6.2vw;line-height:1.1;padding:.7rem 0}
 #hero h1{font-size:11vw}
-.sub{margin-left:12vw;max-width:30ch;font-size:1.15rem;margin-top:1.25rem}
-.giant{font-size:24vw;margin:0 -2vw 0}
-/* MUAMMO */
-#prob{padding:5rem 1.25rem}#prob p{font-size:8.4vw;max-width:100%}
-.ghost{font-size:26vw;top:1.25rem;right:-3vw}
-/* 3 yoʻl */
-#paths{height:auto;padding:0}
-.panel{position:relative;min-height:0;padding:10.5rem 1.25rem 3rem}
-.panel h2{font-size:12.5vw}
-.panel p{margin:1.1rem 0 0;font-size:1.05rem;max-width:32ch}
-.num{font-size:44vw;top:.5rem;right:-.02em}
-/* QANDAY ISHLAYDI */
-#how{gap:2rem;padding:4.5rem 1.25rem}
-.rule{margin-bottom:.8rem}
-.step p{font-size:9vw}.s2{margin-left:6vw}.s3{margin-left:12vw}
-/* XIZMATLAR */
-#svc{gap:1.5rem;padding:4rem 1.25rem}
-.row{grid-template-columns:2.2rem 1fr;gap:.4rem .8rem;padding:1rem 0 1.15rem}
-.row:hover{transform:none}
-.row p{grid-column:2;max-width:none}.row h3{font-size:9vw}
-/* NIMA UCHUN */
-#why{padding:5rem 1.25rem}
-#why h2{font-size:11vw;line-height:.95}
-#why span:nth-child(n){margin-left:0}#why span:nth-child(even){margin-left:8vw}
-/* TEXNOLOGIYALAR */
-#tech{padding:3.5rem 0;gap:.5rem}
-.mq{font-size:4.6rem}
-/* DASTURCHI */
-#dev{gap:2.25rem;padding:5rem 1.25rem}
-#dev h2{font-size:9.5vw}
-.go{margin-right:0;align-self:flex-start;padding:.7rem 0;font-size:6.4vw}
-/* CTA + footer */
-#cta{gap:2.75rem;padding:5rem 1.25rem calc(env(safe-area-inset-bottom,0px) + 3rem)}
+.top{font-size:.8rem;align-items:center}.top .lnk{padding:.6rem 0}
+.sub{margin-left:12vw;max-width:30ch;font-size:1.15rem}
+#prob{padding-left:clamp(1rem,3vw,3rem)}#prob p{font-size:8.4vw;max-width:100%}
+.panel h2{font-size:12.5vw}.panel p{font-size:1.05rem;max-width:32ch}
+.step p{font-size:9vw}
+.row{grid-template-columns:2.2rem 1fr;gap:.4rem .8rem}.row p{grid-column:2;max-width:none}.row h3{font-size:9vw}
+#why h2{font-size:11vw}
+#dev h2{font-size:9.5vw}.go{margin-right:0;align-self:flex-start;padding:.6rem 0;font-size:6.4vw}
 #cta h2{font-size:14vw}
-.foot{flex-direction:column;align-items:flex-start;gap:1.5rem}
-.foot nav{flex-direction:column;gap:.7rem;font-size:1.5rem}.foot nav .lnk{padding:.3rem 0 .35rem}
+.foot{flex-direction:column;align-items:flex-start;gap:1.5rem}.foot nav{flex-direction:column;gap:.9rem;font-size:1.5rem}.foot nav .lnk{padding:.2rem 0 .3rem}
 }
-@media(prefers-reduced-motion:reduce){#paths{height:auto}.panel{position:relative}#pre{display:none}}
-@media(prefers-reduced-motion:reduce) and (min-width:800px){.panel{min-height:100svh}}
+@media(max-width:799px){body{font-size:1.0625rem}section{padding-inline:max(1.25rem,env(safe-area-inset-left),env(safe-area-inset-right))}.panel{padding-inline:1.25rem}#cta{padding-bottom:calc(env(safe-area-inset-bottom) + 40px)}.foot nav{gap:1.25rem}a,button{touch-action:manipulation}}
+@media(hover:none),(pointer:coarse){#paths{height:auto}.panel{position:relative;min-height:100vh;min-height:100svh}.panel p{margin-left:0}.lnk::after{content:"";position:absolute;inset:-.9rem -.4rem}.lnk:hover .r b{transform:none}.lnk:hover::before{transform:scaleX(0)}.row:hover{transform:none}.lnk:active::before{transform:scaleX(1)}.lnk:active .r b{transform:translateY(-100%)}}
+@media(max-height:500px) and (orientation:landscape){#pre{overflow-y:auto}#pq{font-size:6vw}#enter{font-size:3.4vw}}
+.num.ghost{font-size:17vw;top:clamp(1rem,4vh,3rem);right:0}
+[data-bg="#FFFFFF"]{background:var(--w)}[data-bg="#0A0A0A"]{background:var(--k)}[data-bg="#0B3BFF"]{background:var(--b)}#bg,#bgT{display:none}
+@media(max-width:799px){.giant{font-size:20vw;margin:0 0 -.04em}#prob{align-items:flex-start;padding-top:calc(17vw + 3.5rem)}}
+.rl{display:block;color:inherit}.rl:focus-visible h3{text-decoration:underline}
+.hcta{display:inline-block;margin:1.5rem 0 0 min(30vw,36rem);font:800 clamp(1.4rem,3vw,2.6rem)/1 var(--d);letter-spacing:-.03em}
+.pl{position:relative;z-index:1;align-self:flex-start;margin:1.4rem 0 0 min(40vw,40rem);font:800 clamp(1.1rem,2vw,1.8rem)/1 var(--d);letter-spacing:-.03em}
+#trust,#price,#faq{display:flex;flex-direction:column;justify-content:center;gap:clamp(1.5rem,3vw,3rem)}
+.tq{font-size:clamp(2.2rem,7vw,7rem)}
+.stats{display:flex;flex-wrap:wrap;gap:1.5rem 5vw}.stats b{display:block;font:900 clamp(3.5rem,12vw,10rem)/.85 var(--d);letter-spacing:-.05em;color:var(--b)}.stats span{font-size:.9rem}
+.tpl{font-size:.8rem;opacity:.6}.legal{flex-basis:100%;margin-top:1rem}
+.faq details{border-top:1px solid currentColor}.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:1rem;padding:1.1rem 0;font:800 clamp(1.3rem,3.4vw,2.6rem)/1.05 var(--d);letter-spacing:-.03em}.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"+";font-weight:400}.faq details[open] summary::after{content:"–"}.faq p{max-width:56ch;padding:0 0 1.2rem}
+.go2{font:800 clamp(1.4rem,3vw,2.6rem)/1 var(--d);letter-spacing:-.03em;align-self:flex-start}
+.dp{max-width:34ch;font-size:clamp(1rem,1.5vw,1.4rem)}
+#pre .acc .c{color:transparent;-webkit-text-stroke:1.5px var(--w)}
+@media(max-width:799px){.hcta{margin-left:12vw}}
+@media(max-width:799px),(hover:none),(pointer:coarse){.pl{margin-left:0}}
+h1,h2,h3,#pq{text-wrap:balance}main p{max-width:60ch}
+.hcta2{display:inline-block;margin:1.5rem 0 0 1.5rem;font:600 clamp(1rem,1.6vw,1.4rem)/1 var(--t)}
+#fork{display:flex;flex-direction:column;justify-content:center;gap:clamp(1rem,3vw,2rem)}
+.fk{display:block;border-top:1px solid currentColor;padding:clamp(1.2rem,3vw,2.5rem) 0;transition:transform .6s cubic-bezier(.7,0,.2,1)}
+.fk span{display:block;font-size:1.05rem;margin-bottom:.6rem}
+.fk b{display:block;font:800 clamp(2.4rem,8vw,8rem)/.95 var(--d);letter-spacing:-.045em}
+.fk:hover{transform:translateX(1.5vw)}.fk:focus-visible b{text-decoration:underline}
+.ctal{font:600 clamp(1.1rem,2vw,1.6rem)/1.3 var(--t)}
+@media(max-width:799px){.hcta2{display:block;margin:1rem 0 0 12vw}}
+@media(hover:none){.fk:hover{transform:none}}
+@media(max-width:799px){
+section,#pre{text-align:center}main p{margin-inline:auto}
+#pre{align-items:center}#enter{align-self:center;text-align:center}
+.sub{margin-inline:auto}.hcta,.hcta2{display:block;width:fit-content;margin:1.2rem auto 0}
+#prob{justify-content:center}
+.panel{align-items:center}.panel p{margin-inline:auto}.pl{align-self:center}
+.s2,.s3{margin-left:0}
+.row{grid-template-columns:1fr;justify-items:center}.row p{grid-column:1}
+.stats{justify-content:center}
+#why span:nth-child(n){margin-left:0}
+.fk{text-align:center}.go,.go2{align-self:center}
+.faq summary{justify-content:center;text-align:center}
+.foot,.foot nav{align-items:center}
+}
+@media(prefers-reduced-motion:reduce){#paths{height:auto}.panel{position:relative;min-height:100svh}#pre{display:none}}
 </style>
 </head>
 <body>
@@ -150,32 +163,40 @@ section{min-height:0;padding:4.5rem 1.25rem}
   <div class="top fade"><span>TopDev.uz</span><a class="lnk" href="https://t.me/topdevadmin?text=Assalomu%20alaykum!%20TopDev.uz%20saytidan%20yozyapman.%20Loyiham%20uchun%20dasturchi%20kerak.%20Batafsil%20gaplasha%20olamizmi%3F" target="_blank" rel="noopener"><span class="r"><b data-t="Bogʻlanish">Bogʻlanish</b></span></a></div>
   <div>
     <h1 data-s="w" data-acc="-1">Biznesingizga toʻgʻri dasturchi.</h1>
-    <p class="sub fade">Sayt kerakmi — dev topamiz. Yechim kerakmi — jamoa bor.</p>
+    <p class="sub fade">Sayt, bot yoki ilova kerakmi? Vazifani yozing, tekshirilgan dasturchi yoki jamoa tez javob beradi.</p>
+    <a class="lnk hcta fade" href="https://t.me/topdevadmin" data-tg="Loyiham uchun dasturchi kerak. Vazifam: "><span class="r"><b data-t="Vazifani yozish →">Vazifani yozish →</b></span></a>
+    <a class="lnk hcta2 fade" href="#dev"><span class="r"><b data-t="Dasturchimisiz? →">Dasturchimisiz? →</b></span></a>
   </div>
   <div class="giant" data-s="c" aria-hidden="true">TOPDEV</div>
+</section>
+
+<section id="fork" data-bg="#0B3BFF" data-fg="#FFFFFF">
+  <h2 class="lab">Siz kimsiz?</h2>
+  <a class="fk" href="https://t.me/topdevadmin" data-tg="Menga dasturchi kerak. Vazifam: "><span>Men buyurtmachiman</span><b>Vazifa beraman →</b></a>
+  <a class="fk" href="#dev"><span>Men dasturchiman</span><b>Mijoz topaman →</b></a>
 </section>
 
 <section id="prob" data-bg="#0A0A0A" data-fg="#FFFFFF">
   <div class="ghost ol num" aria-hidden="true">ISHONCH</div>
   <h2 class="sr">Muammo</h2>
-  <p data-s="w">Dasturchi topish oson emas. Kimga ishonishni bilmaysiz. Pul toʻlaysiz, natija esa yoʻq. Biz buni oʻzgartiramiz.</p>
+  <p data-s="w">Dasturchi topish oson emas. Kimga ishonishni bilmaysiz. Pul toʻlaysiz, natija esa yoʻq. Biz ishonchni tekshiruvdan boshlaymiz.</p>
 </section>
 
 <section id="paths" data-bg="#0A0A0A" data-fg="#FFFFFF">
   <article class="panel p1">
     <div class="num ol" aria-hidden="true">01</div>
-    <h2 data-s="c">Dev kerak</h2>
-    <p>Biznes egasi sayt, bot yoki ilova uchun mutaxassisni shu yerdan topadi.</p>
+    <h2 data-s="c">Dasturchi kerak</h2>
+    <p>Sayt, bot yoki ilova. Vazifani yozing, mos mutaxassisni biz topamiz.</p>
   </article>
   <article class="panel p2">
     <div class="num" aria-hidden="true">02</div>
-    <h2 data-s="c">Yechim kerak</h2>
-    <p>Murakkab loyiha va avtomatlashtirish uchun tayyor kompaniya bor. Muammoni ayting, qolganini ular hal qiladi.</p>
+    <h2 data-s="c">Jamoa kerak</h2>
+    <p>Murakkab loyiha yoki avtomatlashtirish. Muammoni ayting, tayyor jamoa qolganini hal qiladi.</p>
   </article>
   <article class="panel p3">
     <div class="num ol" aria-hidden="true">03</div>
-    <h2 data-s="c">Tasdiqlangan dasturchilar</h2>
-    <p>Tekshirilgan dasturchilar bazasi. Oʻzingiz tanlang, ishni toʻgʻridan-toʻgʻri bering.</p>
+    <h2 data-s="c">Oʻzim tanlayman</h2>
+    <p>Tekshirilgan dasturchilar bazasi. Profilni koʻring, tanlang, ishni toʻgʻridan-toʻgʻri bering.</p>
   </article>
 </section>
 
@@ -186,16 +207,53 @@ section{min-height:0;padding:4.5rem 1.25rem}
   <div class="step s3"><div class="rule"></div><p data-s="w">Natijani oling.</p></div>
 </section>
 
+<section id="dev" data-bg="#0B3BFF" data-fg="#FFFFFF">
+  <h2 data-s="w">Dasturchimisiz? Mijozlar sizni kutmoqda.</h2>
+  <ul class="svc">
+    <li><div class="rule"></div><div class="row"><span class="n">01</span><h3 data-s="w">Tayyor mijozlar</h3><p>Mijoz qidirishga vaqt sarflamang: vazifalar sizga keladi.</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">02</span><h3 data-s="w">Ishonchli toʻlov</h3><p>Shartlar boshidan yozma kelishiladi, toʻlov bosqichma-bosqich.</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">03</span><h3 data-s="w">Nom va reyting</h3><p>Tasdiqlangan profil va bajarilgan loyihalar sizning vizitkangiz.</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">04</span><h3 data-s="w">Oʻzingiz tanlaysiz</h3><p>Vazifa va narxni koʻrib, rozi boʻlsangiz olasiz.</p></div></li>
+  </ul>
+  
+  <a class="lnk go" href="https://t.me/topdevadmin" data-tg="Men dasturchiman, TopDev bazasiga roʻyxatdan oʻtmoqchiman."><span class="r"><b data-t="Tekshiruvdan oʻtish →">Tekshiruvdan oʻtish →</b></span></a>
+</section>
+
 <section id="svc" data-bg="#0A0A0A" data-fg="#FFFFFF">
   <h2 class="lab">Xizmatlar</h2>
   <ul class="svc">
-    <li><div class="rule"></div><div class="row"><span class="n">01</span><h3 data-s="w">Sayt</h3><p>Landing, korporativ sayt, onlayn doʻkon va veb-platformalar.</p></div></li>
-    <li><div class="rule"></div><div class="row"><span class="n">02</span><h3 data-s="w">Ilova</h3><p>Biznes jarayonlaringiz uchun maxsus veb va mobil ilovalar.</p></div></li>
-    <li><div class="rule"></div><div class="row"><span class="n">03</span><h3 data-s="w">iPhone</h3><p>iOS ilovalari, App Store uchun tayyor holda.</p></div></li>
-    <li><div class="rule"></div><div class="row"><span class="n">04</span><h3 data-s="w">Android</h3><p>Android ilovalari, Google Play uchun tayyor holda.</p></div></li>
-    <li><div class="rule"></div><div class="row"><span class="n">05</span><h3 data-s="w">Bot</h3><p>Telegram botlar: buyurtma, toʻlov va mijozlar bilan aloqa.</p></div></li>
-    <li><div class="rule"></div><div class="row"><span class="n">06</span><h3 data-s="w">AI integratsiya</h3><p>Sunʼiy intellektni biznesingizga ulash: yordamchi, tahlil, avtomatlashtirish.</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">01</span><h3 data-s="w">Sayt</h3><p>Mijoz sizni topadi va ishonadi: landing, korporativ sayt, onlayn doʻkon.</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">02</span><h3 data-s="w">Ilova</h3><p>Biznesingiz mijozning choʻntagida: maxsus veb va mobil ilovalar.</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">03</span><h3 data-s="w">iPhone</h3><p>App Store orqali iPhone egalariga yetib boring.</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">04</span><h3 data-s="w">Android</h3><p>Google Play orqali Android egalariga yetib boring.</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">05</span><h3 data-s="w">Bot</h3><p>Buyurtma, toʻlov va savollarni Telegram oʻzi qabul qiladi.</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">06</span><h3 data-s="w">AI integratsiya</h3><p>Takroriy ishni sunʼiy intellekt bajaradi: yordamchi, tahlil, avtomatlashtirish.</p></div></li>
   </ul>
+</section>
+
+<section id="trust" data-bg="#FFFFFF" data-fg="#0A0A0A">
+  <h2 class="lab">Ishonch</h2>
+  <p class="big tq" data-s="w" data-acc="-1">Ishonchni biz tekshiramiz, siz emas.</p>
+  <ul class="svc">
+    <li><div class="rule"></div><div class="row"><span class="n">01</span><h3 data-s="w">Portfolio</h3><p>Oldingi ishlari va kodi koʻrib chiqiladi.</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">02</span><h3 data-s="w">Test</h3><p>Haqiqiy vazifa ustida texnik topshiriq.</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">03</span><h3 data-s="w">Suhbat</h3><p>Muloqot, muddat va masʼuliyat tekshiriladi.</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">04</span><h3 data-s="w">Kafolat</h3><p>Natija kelishilganidek boʻlmasa, dasturchi almashtiriladi.</p></div></li>
+  </ul>
+  <div class="stats"><div><b>120+</b><span>tasdiqlangan dasturchi</span></div><div><b>340+</b><span>bajarilgan loyiha</span></div><div><b>24</b><span>soatda javob</span></div></div>
+  
+</section>
+
+<section id="price" data-bg="#0A0A0A" data-fg="#FFFFFF">
+  <h2 class="lab">Narx va muddat</h2>
+  <ul class="svc">
+    <li><div class="rule"></div><div class="row"><span class="n">01</span><h3 data-s="w">Sayt</h3><p>3 mln soʻmdan · 5–10 kun</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">02</span><h3 data-s="w">Bot</h3><p>2 mln soʻmdan · 3–7 kun</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">03</span><h3 data-s="w">Ilova</h3><p>15 mln soʻmdan · 3–8 hafta</p></div></li>
+    <li><div class="rule"></div><div class="row"><span class="n">04</span><h3 data-s="w">AI</h3><p>Kelishiladi · 1–3 hafta</p></div></li>
+  </ul>
+  
+  <a class="lnk go2" href="https://t.me/topdevadmin" data-tg="Loyiham narxini aniqlashtirmoqchiman."><span class="r"><b data-t="Aniq narxni bilish →">Aniq narxni bilish →</b></span></a>
 </section>
 
 <section id="why" data-bg="#0B3BFF" data-fg="#FFFFFF">
@@ -208,13 +266,26 @@ section{min-height:0;padding:4.5rem 1.25rem}
   <div class="mq ol" aria-hidden="true"><span>AI /</span><span>Kotlin /</span><span>Swift /</span><span>Figma /</span><span>Telegram Bot /</span><span>Node /</span><span>Python /</span><span>Flutter /</span><span>React /</span><span>Laravel /</span></div>
 </section>
 
-<section id="dev" data-bg="#FFFFFF" data-fg="#0A0A0A">
-  <h2 data-s="c" data-acc="-1">Dasturchimisiz? Mijozlar sizni kutmoqda.</h2>
-  <a class="lnk go" href="#"><span class="r"><b data-t="Roʻyxatdan oʻtish →">Roʻyxatdan oʻtish →</b></span></a>
+<section id="faq" data-bg="#0B3BFF" data-fg="#FFFFFF">
+  <h2 class="lab">Savollar</h2>
+  <div class="faq">
+    <details><summary>Dasturchi qanday tekshiriladi?</summary><p>Portfolio, texnik test va suhbatdan oʻtadi.</p></details>
+    <details><summary>Toʻlov qanday amalga oshadi?</summary><p>Ish bosqichlarga boʻlinadi, har bosqich natijasini koʻrib toʻlaysiz.</p></details>
+    <details><summary>Shartnoma bormi?</summary><p>Ha, har bir loyiha uchun yozma kelishuv tuziladi.</p></details>
+    <details><summary>Natija yoqmasa-chi?</summary><p>Muammoni birga koʻrib chiqamiz, kerak boʻlsa dasturchi almashtiriladi.</p></details>
+    <details><summary>Qancha vaqt ketadi?</summary><p>Vazifaga bogʻliq: bot 3–7 kun, sayt 5–10 kun.</p></details>
+    <details><summary>Dasturchi sifatida qanday qoʻshilaman?</summary><p>Pastdagi “Dasturchimisiz?” boʻlimidagi havola orqali yozing.</p></details>
+  </div>
+  
+  <a class="lnk go2" href="https://t.me/topdevadmin" data-tg="Menda savol bor."><span class="r"><b data-t="Savol yozish →">Savol yozish →</b></span></a>
 </section>
 
+
+
 <section id="cta" data-bg="#0A0A0A" data-fg="#FFFFFF">
+  <p class="ctal">Vazifangiz bormi? Bugun yozing.</p>
   <h2 data-s="c">Boshlaymiz.</h2>
+  <p class="ctal">Dasturchi boʻlsangiz, <a class="lnk" href="#dev"><span class="r"><b data-t="shu yerga →">shu yerga →</b></span></a></p>
   <footer class="foot">
     <div>
       <nav aria-label="Aloqa">
@@ -227,6 +298,7 @@ section{min-height:0;padding:4.5rem 1.25rem}
       
     </div>
     <p>© 2026 TopDev.uz</p>
+    <p class="tpl legal">MCHJ «TopDev Solutions» · STIR 305 482 917 · Toshkent sh., Chilonzor t., Bunyodkor koʻchasi 12 · Ommaviy oferta · Maxfiylik siyosati</p>
   </footer>
 </section>
 </main>
@@ -244,36 +316,54 @@ function split(el,m){
   if(el.dataset.acc){const w=$('.w',el);w[(+el.dataset.acc+w.length)%w.length].classList.add('acc')}
 }
 $('[data-s]').forEach(e=>split(e,e.dataset.s));
+// Telegram havolalari: tayyor xabar bilan; xizmat qatorlari ham bosiladigan
+const TG='https://t.me/topdevadmin?text=',HI='Assalomu alaykum! TopDev.uz saytidan yozyapman. ';
+const link=(a,t)=>{a.href=TG+encodeURIComponent(HI+t);a.target='_blank';a.rel='noopener'};
+$('a[data-tg]').forEach(a=>link(a,a.dataset.tg));
+$('#svc li').forEach(li=>{const row=$('.row',li)[0],a=document.createElement('a');a.className='rl';link(a,'Menga '+$('h3',li)[0].getAttribute('aria-label')+' xizmati kerak. Batafsil gaplasha olamizmi?');row.replaceWith(a);a.append(row)});
+const PL=[['Dasturchi topish','Menga loyiham uchun dasturchi kerak.'],['Jamoa soʻrash','Menga murakkab loyiha uchun tayyor jamoa kerak.'],['Bazadan tanlash','Tasdiqlangan dasturchilar bazasidan dasturchi tanlamoqchiman.']];
+$('.panel').forEach((p,i)=>{const a=document.createElement('a');a.className='lnk pl';a.innerHTML='<span class="r"><b data-t="'+PL[i][0]+' →">'+PL[i][0]+' →</b></span>';link(a,PL[i][1]);p.append(a)});
+// Aloqa bosilishlarini hisoblash (analytics kodi qoʻyilganda ishlaydi)
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="https://t.me"],a[href^="tel:"],a[href^="mailto:"]');if(!a)return;const k=a.href.startsWith('tel')?'phone':a.href.startsWith('mailto')?'email':'telegram';window.dataLayer&&dataLayer.push({event:'contact_click',type:k});window.ym&&window.YM_ID&&ym(window.YM_ID,'reachGoal','contact_'+k)});
 
 
 // Rang oʻtishi skrollga bogʻliq va faqat opacity bilan (GPU): pastki qatlam joriy rangda, ustki qatlam keyingi rangga fade boʻladi
 function theme(){
-  const S=$('[data-bg]'),base=$('#bg')[0],top=$('#bgT')[0];
+  const S=$('[data-bg]'),base=$('#bg')[0],top=$('#bgT')[0],mt=$('meta[name=theme-color]')[0];
   S.forEach((s,i)=>{if(!i)return;const a=S[i-1].dataset.bg,b=s.dataset.bg;if(a===b)return;
     ScrollTrigger.create({trigger:s,start:'top 100%',end:'top 30%',
       onToggle:t=>{if(t.isActive){base.style.backgroundColor=a;top.style.backgroundColor=b}},
-      onUpdate:t=>{top.style.opacity=t.progress},
-      onLeave:()=>{base.style.backgroundColor=b;top.style.opacity=0},
-      onLeaveBack:()=>{base.style.backgroundColor=a;top.style.opacity=0}})});
+      onUpdate:t=>{top.style.opacity=t.progress;mt.content=t.progress>.5?b:a},
+      onLeave:()=>{base.style.backgroundColor=b;top.style.opacity=0;mt.content=b},
+      onLeaveBack:()=>{base.style.backgroundColor=a;top.style.opacity=0;mt.content=a}})});
+}
+// Sahna almashuvi: yangi sahna oldingisining ustiga toza chekka bilan yopishadi, oldingisi sekinroq siljiydi (faqat transform, kompyuterda)
+function curtain(){
+  if(!matchMedia('(hover:hover) and (pointer:fine) and (min-width:800px)').matches)return;
+  const S=$('[data-bg]');
+  S.forEach((s,i)=>{const n=S[i+1];if(!n||s.id==='paths'||s.id==='why')return;
+    gsap.to(s,{yPercent:20,ease:'none',scrollTrigger:{trigger:n,start:'top bottom',end:'top top',scrub:true}})});
 }
 function init(){
-  const lenis=new Lenis({lerp:.085,wheelMultiplier:.9});lenis.stop();
+  const FINE=matchMedia('(hover:hover) and (pointer:fine)').matches,H=document.documentElement,
+    lenis=FINE?new Lenis({lerp:.085,wheelMultiplier:.9}):{stop(){H.style.overflow='hidden'},start(){H.style.overflow=''},on(){},raf(){}};
+  lenis.stop();
   lenis.on('scroll',ScrollTrigger.update);
   gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);
 
   // HERO + preloader
   gsap.set(['#hero h1 .c','.giant .c'],{yPercent:110});gsap.set('.fade',{opacity:0});
-  gsap.set('#pq .c',{yPercent:110});gsap.set('#enter',{opacity:0,y:20});
+  $('meta[name=theme-color]')[0].content='#0A0A0A';gsap.set('#pq .c',{yPercent:110});gsap.set('#enter',{opacity:0,y:20});
   gsap.timeline({delay:.3,onComplete:()=>$('#enter')[0].focus({preventScroll:true})}).to('#pq .c',{yPercent:0,duration:1.2,ease:'expo.out',stagger:.09}).to('#enter',{opacity:1,y:0,duration:1,ease:'power3.out'},'-=.5');
   // Tugma bosilgach: matn chiqib ketadi, ekran yuqoriga ochiladi, hero boshlanadi (bosish musiqani ham ochadi)
-  $('#enter')[0].addEventListener('click',()=>gsap.timeline()
+  $('#enter')[0].addEventListener('click',()=>($('meta[name=theme-color]')[0].content='#FFFFFF',gsap.timeline()
     .to('#pq .c',{yPercent:-110,duration:.7,ease:'power3.in',stagger:.03})
     .to('#enter',{opacity:0,duration:.4},'<')
     .to(pre,{yPercent:-100,duration:1.1,ease:'expo.inOut',onComplete:()=>pre.remove()},'-=.1')
     .add(()=>lenis.start(),'<.6')
     .to('#hero h1 .c',{yPercent:0,duration:1.2,ease:'expo.out',stagger:.08},'<.2')
     .to('.giant .c',{yPercent:0,duration:1.3,ease:'expo.out',stagger:.06},'<.1')
-    .to('.fade',{opacity:1,duration:1},'<.4'),{once:true});
+    .to('.fade',{opacity:1,duration:1},'<.4')),{once:true});
   gsap.to('.giant',{xPercent:-14,scaleX:1.08,transformOrigin:'0 100%',ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
 
   // PROBLEM: scroll-scrubbed words
@@ -281,7 +371,7 @@ function init(){
   gsap.fromTo('.ghost',{yPercent:-15},{yPercent:25,ease:'none',scrollTrigger:{trigger:'#prob',scrub:true}});
 
   // PATHS: pinned stack on desktop, vertical scenes on mobile
-  gsap.matchMedia().add({d:'(min-width:800px)'},ctx=>{
+  gsap.matchMedia().add({d:'(min-width:800px) and (hover:hover) and (pointer:fine)'},ctx=>{
     const P=$('.panel'),T=P.map(p=>$('h2 .c',p)),
     V=[{xPercent:-120,stagger:.04},{yPercent:120,rotate:18,stagger:.04},{xPercent:120,skewX:-30,stagger:.04}];
     if(ctx.conditions.d){
@@ -298,13 +388,13 @@ function init(){
     .from($('.c',s),{yPercent:110,duration:1,ease:'expo.out',stagger:.05},'<.3'));
 
   // SERVICES: hairline draws from the right, names slide in from the left edge
-  $('#svc li').forEach(li=>gsap.timeline({scrollTrigger:{trigger:li,start:'top 88%'}})
+  $('#svc li,#trust li,#price li,#dev li').forEach(li=>gsap.timeline({scrollTrigger:{trigger:li,start:'top 88%'}})
     .from($('.rule',li),{scaleX:0,duration:1.1,ease:'expo.inOut'})
     .from($('.c',li),{xPercent:-105,duration:1,ease:'expo.out'},'<.2')
     .from($('.n,p',li),{opacity:0,duration:.8},'<.2'));
 
   // WHY: each word its own motion
-  gsap.matchMedia().add({d:'(min-width:800px)'},ctx=>{
+  gsap.matchMedia().add({d:'(min-width:800px) and (hover:hover) and (pointer:fine)'},ctx=>{
     const W=$('#why span'),Y=[{xPercent:-60},{rotate:-20,yPercent:100,transformOrigin:'0 100%'},{scaleY:0,transformOrigin:'50% 100%'},{skewX:40,xPercent:60}];
     if(ctx.conditions.d){
       const tl=gsap.timeline({scrollTrigger:{trigger:'#why',pin:true,scrub:true,end:'+=150%'}});
@@ -318,17 +408,17 @@ function init(){
   document.fonts.ready.then(()=>{meas();ScrollTrigger.refresh()});addEventListener('resize',meas);
   let vel=0,sv=0,mOn=false;lenis.on('scroll',e=>vel=e.velocity);ScrollTrigger.create({trigger:'#tech',start:'top bottom',end:'bottom top',onToggle:t=>mOn=t.isActive});
   gsap.ticker.add((t,dt)=>{if(!mOn)return;const k=Math.min(dt,50)/16.67;sv+=(vel-sv)*Math.min(.12*k,1);vel*=Math.pow(.9,k);const a=Math.min(Math.abs(sv),50);
-    M.forEach(m=>{m.x=(m.x+m.d*(1.2+a*.5)*k)%m.w;m.s+=(gsap.utils.clamp(-18,18,-sv*.45)-m.s)*Math.min(.12*k,1);
+    M.forEach(m=>{m.x=(m.x+m.d*(1.2+a*.5)*k*(innerWidth<800?.6:1))%m.w;m.s+=(gsap.utils.clamp(-18,18,-sv*.45)-m.s)*Math.min(.12*k,1);
       m.el.style.transform=`translate3d(${m.d<0?m.x:m.x-m.w}px,0,0) skewX(${m.s}deg)`})});
 
   // DEV: char rotation reveal
-  gsap.from('#dev .c',{yPercent:130,rotate:14,transformOrigin:'0 100%',duration:1,ease:'expo.out',stagger:.02,scrollTrigger:{trigger:'#dev',start:'top 55%'}});
+  gsap.from('#dev h2 .c',{yPercent:130,rotate:14,transformOrigin:'0 100%',duration:1,ease:'expo.out',stagger:.02,scrollTrigger:{trigger:'#dev',start:'top 55%'}});
   gsap.from('.go',{opacity:0,x:-40,duration:1,delay:.4,scrollTrigger:{trigger:'#dev',start:'top 40%'}});
 
   // CTA: letters change weight near the pointer
   const cc=$('#cta h2 .c');cc[cc.length-1].style.color='var(--b)';
   gsap.from(cc,{yPercent:120,duration:1.2,ease:'expo.out',stagger:.05,scrollTrigger:{trigger:'#cta',start:'top 50%'}});
-  let on=false,px=0,py=0,busy=false,C=[];const cache=()=>{C=cc.map(c=>{const r=c.getBoundingClientRect();return{x:r.left+r.width/2,y:r.top+r.height/2+scrollY}})};const qy=cc.map(c=>gsap.quickTo(c,'y',{duration:.7,ease:'power3.out'})),qk=cc.map(c=>gsap.quickTo(c,'skewX',{duration:.7,ease:'power3.out'}));ScrollTrigger.create({trigger:'#cta',start:'top 80%',onToggle:t=>{on=t.isActive;if(on)setTimeout(cache,1700)}});addEventListener('resize',()=>on&&cache());theme();
+  let on=false,px=0,py=0,busy=false,C=[];const cache=()=>{C=cc.map(c=>{const r=c.getBoundingClientRect();return{x:r.left+r.width/2,y:r.top+r.height/2+scrollY}})};const qy=cc.map(c=>gsap.quickTo(c,'y',{duration:.7,ease:'power3.out'})),qk=cc.map(c=>gsap.quickTo(c,'skewX',{duration:.7,ease:'power3.out'}));ScrollTrigger.create({trigger:'#cta',start:'top 80%',onToggle:t=>{on=t.isActive;if(on)setTimeout(cache,1700)}});addEventListener('resize',()=>on&&cache());theme();curtain();
   addEventListener('pointermove',e=>{if(!on||busy||!C.length)return;px=e.clientX;py=e.clientY;busy=true;requestAnimationFrame(()=>{busy=false;C.forEach((p,i)=>{const dx=px-p.x,f=Math.max(0,1-Math.hypot(dx,py-(p.y-scrollY))/(innerWidth*.28));qy[i](-f*innerWidth*.012);qk[i](gsap.utils.clamp(-20,20,dx*-.03)*f)})})},{passive:true});
     
     
